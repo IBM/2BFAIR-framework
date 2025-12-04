@@ -1,0 +1,135 @@
+{
+  "@context": "http://schema.org",
+  "@id": "https://doi.org/10.5281/zenodo.8255910",
+  "@type": "https://schema.org/Dataset",
+  "author": [
+    {
+      "@id": "https://orcid.org/0000-0002-2634-8270",
+      "@type": "Person",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "IBM"
+        }
+      ],
+      "familyName": "Eduardo Almeida Soares",
+      "name": "Eduardo Almeida Soares"
+    },
+    {
+      "@type": "Person",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "IBM"
+        }
+      ],
+      "familyName": "Victor Shirasuna",
+      "name": "Victor Shirasuna"
+    },
+    {
+      "@type": "Person",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "IBM"
+        }
+      ],
+      "familyName": "Emilio Vital Brazil",
+      "name": "Emilio Vital Brazil"
+    }
+  ],
+  "contentSize": "67.2 MB",
+  "creator": [
+    {
+      "@id": "https://orcid.org/0000-0002-2634-8270",
+      "@type": "Person",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "IBM"
+        }
+      ],
+      "familyName": "Eduardo Almeida Soares",
+      "name": "Eduardo Almeida Soares"
+    },
+    {
+      "@type": "Person",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "IBM"
+        }
+      ],
+      "familyName": "Victor Shirasuna",
+      "name": "Victor Shirasuna"
+    },
+    {
+      "@type": "Person",
+      "affiliation": [
+        {
+          "@type": "Organization",
+          "name": "IBM"
+        }
+      ],
+      "familyName": "Emilio Vital Brazil",
+      "name": "Emilio Vital Brazil"
+    }
+  ],
+  "dateCreated": "2023-08-17T11:20:32.047273+00:00",
+  "dateModified": "2025-07-23T17:22:42.236301+00:00",
+  "datePublished": "2023-08-17",
+  "description": "<p>Biodegradability is a crucial factor in assessing the long-term impact of chemicals on the environment. However, experimental testing to determine biodegradability is time-consuming and laborious. To address this issue, <em>in silico </em>approaches such as quantitative structure-activity relationship (QSAR) models are highly encouraged by legislators.</p>\n\n<p>&nbsp;</p>\n\n<p>European legislators have incorporated chemical persistency in the Registration, Evaluation, and Authorization of Chemicals (REACH) for the assessment of chemicals. However, only 61% of chemicals produced or imported in quantities of over 1000 tons per year have information on biodegradability. As a potential solution, REACH encourages the use of QSAR models to predict the biodegradability of compounds.</p>\n\n<p>&nbsp;</p>\n\n<p>To encourage the development of QSAR models to predict the biodegradability of compounds, this work extends the &quot;All-Public set,&quot; which is an aggregated dataset with information on 2830 compounds from various sources. In this study, we contribute to this dataset by adding information on the biodegradability of 3707 new compounds from the ECHA database, resulting in a larger dataset with the biodegradability information of 6537 compounds.</p>\n\n<p>&nbsp;</p>\n\n<p>By providing a larger dataset with biodegradability information, we aim to promote the development of more accurate QSAR models for predicting the biodegradability of compounds. This will enable more efficient and effective assessments of the potential impact of chemicals on the environment, facilitating the development of more sustainable and environmentally friendly products.</p>",
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://zenodo.org/api/records/8255910/files/ECHA_raw_RB_compounds.csv/content",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://zenodo.org/api/records/8255910/files/ECHA_raw_NRB_compounds.csv/content",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://zenodo.org/api/records/8255910/files/ECHA_biodegradability_new_compounds.csv/content",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://zenodo.org/api/records/8255910/files/Expanded_Biodegradability_Dataset.ipynb/content",
+      "encodingFormat": "application/octet-stream"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://zenodo.org/api/records/8255910/files/ECHA_results_RB_compounds.csv/content",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://zenodo.org/api/records/8255910/files/ECHA_results_NRB_compounds.csv/content",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://zenodo.org/api/records/8255910/files/All-Public_dataset_Mordred.csv/content",
+      "encodingFormat": "text/csv"
+    },
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://zenodo.org/api/records/8255910/files/ECHA_biodegradability_compounds.csv/content",
+      "encodingFormat": "text/csv"
+    }
+  ],
+  "identifier": "https://doi.org/10.5281/zenodo.8255910",
+  "keywords": "Biodegradability, QSAR, dataset, Machine Learning",
+  "license": "https://creativecommons.org/licenses/by/4.0/legalcode",
+  "name": "An Expanded Dataset for Improved Prediction of Chemical Biodegradability",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Zenodo"
+  },
+  "size": "67.2 MB",
+  "url": "https://zenodo.org/records/8255910",
+  "version": "1.0"
+}

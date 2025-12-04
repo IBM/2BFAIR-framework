@@ -1,0 +1,91 @@
+# configuration approach followed:
+# - whenever possible, prefer pyproject.toml
+# - for configurations insufficiently supported by pyproject.toml, use setup.cfg instead
+# - setup.py discouraged; minimal stub included only for compatibility with legacy tools
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "tobefair_framework"
+version = "0.1.0"
+description = "2A frameworkf to create applications for automated FAIRness assessment."
+authors = [
+    "Leonardo Azevedo <lga@br.ibm.com>",
+]
+readme = "README.md"
+repository = "https://github.ibm.com/brl-kbe/2BFAIR-framework"
+
+[tool.poetry.dependencies]
+python = ">= 3.7, < 3.12"
+click = "*"
+# optional dependencies that can be opted in by apps.
+pytest = { version = "*", optional = true }
+pytest-cov = { version = "*", optional = true }
+
+[tool.poetry.extras]
+test = ["pytest", "pytest-cov"]
+
+[tool.poetry.group.dev]
+optional = false
+
+[tool.poetry.group.dev.dependencies]
+pytest = "*"
+pytest-cov = "*"
+black = "*"
+flake8 = "*"
+pep8-naming = "*"
+mypy = "*"
+sphinx = "*"
+sphinx-autodoc-typehints = "*"
+better-apidoc = "*"
+six = "*"
+sphinx-rtd-theme = "*"
+myst-parser = "*"
+
+[tool.poetry.scripts]
+salutation = "tobefair_framework.complex_module.core:formal_introduction"
+
+[tool.semantic_release]
+# for default values check:
+# https://github.com/relekang/python-semantic-release/blob/master/semantic_release/defaults.cfg
+
+version_source = "tag_only"
+branch = "main"
+
+# configure types which should trigger minor and patch version bumps respectively
+# (note that they must be a subset of the configured allowed types):
+parser_angular_allowed_types = "build,chore,ci,docs,feat,fix,perf,style,refactor,test"
+parser_angular_minor_types = "feat"
+parser_angular_patch_types = "fix,perf"
+
+# unstaging the changelog (i.e. command part before &&) is a workaround for
+# https://github.com/relekang/python-semantic-release/issues/381:
+build_command = "git restore --staged CHANGELOG.md && python -m build"
+
+github_token_var="GITHUB_TOKEN"
+
+hvcs_domain="github.ibm.com"
+hvcs_api_domain="github.ibm.com/api/v3"  # see https://ibm-analytics.slack.com/archives/C3SSJ6CSE/p1660313562338669?thread_ts=1660300230.162449&cid=C3SSJ6CSE
+
+[tool.black]
+line-length = 88
+skip-string-normalization = false
+target-version = ['py37']
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 88
+force_to_top = ["rdkit", "scikit-learn"]
+
+[tool.mypy]
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = "pytest.*"
+ignore_missing_imports = true

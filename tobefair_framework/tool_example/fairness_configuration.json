@@ -1,0 +1,51 @@
+{
+  "F": {
+    "id": "F",
+    "name": "Findability",
+    "principles": {
+      "F1": {
+        "id": "F1",
+        "name": "(meta)data are assigned a globally unique and persistent identifier.",
+        "metrics": {
+          "F1-01MD": {
+            "alternate_test_behavior": "fail",
+            "id": "F1-01MD",
+            "name": "Metadata and data is assigned a globally unique identifier.",
+            "scoring_mechanism": "alternative",
+            "priority": "Essential",
+            "tests": {
+              "F1-01MD-1": {
+                "id": "F1-01MD-1",
+                "name": "Identifier may conform to a UUID or HASH-type syntax.",
+                "description_for_passed": "Identifier conforms to a UUID or HASH-type syntax.",
+                "description_for_failure": "Identifier did not conform to a UUID or HASH-type syntax.",
+                "max_score": 0.5,
+                "maturity": "Moderate",
+                "recommendation": {
+                  "value": "The identifier may conform to a UUID or HASH syntax, although a globally unique identifier (GUID) is preferable. A GUID is unique, irrespective of the context."
+                },
+                "recommendation_details": "These identifiers are not, however, guaranteed to be globally unique: some other resource might have the same identifier. For a higher degree of FAIRness, consider defining an identifier that is guaranteed to globally uniquely identify a particular resource irrespective of the context, i.e., no distinct object has the same identifier.",
+                "losses": "Without a unique identifier of any kind, there is no guarantee that resources with the same identifier provisioned by different sources represent the same subject.",
+                "skip": false
+              },
+              "F1-01MD-2": {
+                "id": "F1-01MD-2",
+                "name": "Identifier should conform to a defined unique identifier syntax.",
+                "description_for_passed": "Identifier conformed to a defined unique identifier syntax (IRI, URL).",
+                "description_for_failure": "Identifier did not conform to a defined unique identifier syntax (IRI, URL).",
+                "max_score": 1,
+                "maturity": "Advanced",
+                "recommendation": {
+                  "value": "Define a globally unique identifier (GUID) for the resources, i.e., an identifier that is unique irrespective of context."
+                },
+                "recommendation_details": "Define identifiers guaranteed to globally uniquely identify a particular resource irrespective of the context, i.e., no distinct object has the same identifier. Examples of GUIDs include URL, PURL, DOI, ARK, and Handle System ID. The use of a GUID results in an Advanced maturity level. As an alternative, you can use a UUID or hash; however, they do not ensure uniqueness irrespective of context, which results in an Initial maturity level.",
+                "losses": "Without a globally unique identifier, there is no guarantee that resources with the same identifier provisioned by different sources represent the same subject.",
+                "skip": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
