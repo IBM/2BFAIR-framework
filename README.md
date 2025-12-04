@@ -25,7 +25,7 @@ Using a virtual environment for all commands.
 - We are using Python 3.11. If you are using pyenv, you can install Python 3.11 running: `pyenv install 3.11`.
 - Create a virtual environment: `pyenv virtualenv 3.11.12 tobefair_framework`
 - Start the environment running `pyenv shell 2Btobefair_framework`
-- Run `pyenv local 2Btobefair_framework` to generate a `.python-version` with the Python version of the environment.
+- Run `pyenv local tobefair_framework` to generate a `.python-version` with the Python version of the environment.
 
 - Other useful commands:
   - `pyenv versions`
@@ -38,13 +38,13 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-
 ## Installation
 
 ### Package installation
+
 ```sh
 # assuming you have an SSH key set up on GitHub
-pip install "git+ssh://git@github.ibm.com/brl-kbe/2BFAIR-framework.git@main"
+pip install "git+ssh://git@github.com/IBM/2BFAIR-framework.git@main"
 ```
 
 ### Suggested setup for development
