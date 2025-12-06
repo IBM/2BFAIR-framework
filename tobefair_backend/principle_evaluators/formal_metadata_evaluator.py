@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from typing import List
 
 from tobefair_backend.collector.metadata_source_repository_app import (

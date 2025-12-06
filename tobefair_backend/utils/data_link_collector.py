@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from typing import Callable, ClassVar, List, cast
 from urllib.parse import ParseResult, ParseResultBytes, urljoin, urlparse
 

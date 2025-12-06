@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from typing import List
 
 from tobefair_backend.principle_evaluators.fairness_test import fairness_test

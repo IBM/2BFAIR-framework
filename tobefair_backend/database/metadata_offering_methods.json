@@ -1,0 +1,30 @@
+{
+  "META_TAGS": {
+    "label": "HTML META Tags",
+    "acronym": "meta_tags"
+  },
+  "JSON_IN_HTML": {
+    "label": "Embedded JSON-LD in HTML",
+    "acronym": "json_in_html"
+  },
+  "MICRODATA": {
+    "label": "Microdata",
+    "acronym": "microdata"
+  },
+  "RDFA": {
+    "label": "RDFa",
+    "acronym": "rdfa"
+  },
+  "TYPED_LINKS": {
+    "label": "Typed Links",
+    "acronym": "typed_links"
+  },
+  "SIGNPOSTING": {
+    "label": "Signposting Links",
+    "acronym": "signposting"
+  },
+  "CONTENT_NEGOTIATION": {
+    "label": "Content Negotiation",
+    "acronym": "content_negotiation"
+  }
+}

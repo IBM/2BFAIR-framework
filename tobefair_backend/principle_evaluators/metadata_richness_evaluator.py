@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from typing import Callable, Dict, List, TypeAlias
 
 from tobefair_backend.collector.metadata_collector_schemaorg_jsonld import (

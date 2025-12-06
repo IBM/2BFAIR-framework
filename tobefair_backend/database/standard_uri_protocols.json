@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Advanced Message Queuing Protocol",
+    "id": "amqp"
+  },
+  {
+    "name": "Constrained Application Protocol",
+    "id": "coap"
+  },
+  {
+    "name": "Constrained Application Protocol Secure",
+    "id": "coaps"
+  },
+  {
+    "name": "File Transfer Protocol",
+    "id": "ftp"
+  },
+  {
+    "name": "Hyper Text Transfer Protocol",
+    "id": "http"
+  },
+  {
+    "name": "Hyper Text Transfer Protocol Secure",
+    "id": "https"
+  },
+  {
+    "name": "Message Queuing Telemetry Transport",
+    "id": "mqtt"
+  },
+  {
+    "name": "Real Time Streaming Protocol",
+    "id": "rtsp"
+  },
+  {
+    "name": "Real Time Streaming Protocol",
+    "id": "rtspu"
+  },
+  {
+    "name": "Secure File Transfer Protocol",
+    "id": "sftp"
+  },
+  {
+    "name": "Secure Hypertext Transfer Protocol",
+    "id": "shttp"
+  },
+  {
+    "name": "Secure Shell",
+    "id": "ssh"
+  },
+  {
+    "name": "Subversion",
+    "id": "svn"
+  },
+  {
+    "name": "Telnet",
+    "id": "telnet"
+  },
+  {
+    "name": "WebSocket",
+    "id": "ws"
+  },
+  {
+    "name": "WebSocket Secure",
+    "id": "wss"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "HTML": {
+    "label": "HTML",
+    "acronym": "html"
+  },
+  "XHTML": {
+    "label": "XHTML",
+    "acronym": "xhtml"
+  },
+  "XML": {
+    "label": "XML",
+    "acronym": "xml"
+  },
+  "RDF": {
+    "label": "RDF",
+    "acronym": "rdf"
+  },
+  "RDFA": {
+    "label": "RDFa",
+    "acronym": "rdfa"
+  },
+  "JSON": {
+    "label": "JSON",
+    "acronym": "json"
+  },
+  "JSONLD": {
+    "label": "JSON-LD",
+    "acronym": "json-ld"
+  },
+  "MICRODATA": {
+    "label": "MICRODATA",
+    "acronym": "microdata"
+  },
+  "TEXT": {
+    "label": "Text",
+    "acronym": "text"
+  }
+}

@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from http.client import HTTPMessage
 
 from tobefair_backend.model.resources.data_size import DataSize, DataType

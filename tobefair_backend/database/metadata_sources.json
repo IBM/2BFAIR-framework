@@ -1,0 +1,108 @@
+{
+    "HIGHWIRE_EPRINTS_EMBEDDED": {
+        "method": "META_TAGS",
+        "label": "Embedded Highwire or Eprints",
+        "acronym": "highwire-eprints-html",
+        "format": "HTML"
+    },
+    "DUBLINCORE_EMBEDDED": {
+        "method": "META_TAGS",
+        "label": "Embedded DublinCore",
+        "acronym": "dublincore-html",
+        "format": "XHTML"
+    },
+    "OPENGRAPH_EMBEDDED": {
+        "method": "RDFA",
+        "label": "Embedded OpenGraph",
+        "acronym": "opengraph-html",
+        "format": "RDFA"
+    },
+    "SCHEMAORG_EMBEDDED": {
+        "method": "JSON_IN_HTML",
+        "label": "Schema.org JSON-LD (Embedded)",
+        "acronym": "schemaorg-html",
+        "format": "JSON-LD"
+    },
+    "RDFA_EMBEDDED": {
+        "method": "RDFA",
+        "label": "Embedded RDFa",
+        "acronym": "rdfa-html",
+        "format": "RDFA"
+    },
+    "MICRODATA_EMBEDDED": {
+        "method": "MICRODATA",
+        "label": "Embedded Microdata",
+        "acronym": "microdata-html",
+        "format": "MICRODATA"
+    },
+    "SCHEMAORG_NEGOTIATED": {
+        "method": "CONTENT_NEGOTIATION",
+        "label": "Schema.org JSON-LD (Negotiated)",
+        "acronym": "schemaorg-negotiated",
+        "format": "JSON-LD"
+    },
+    "DATACITE_JSON_NEGOTIATED": {
+        "method": "CONTENT_NEGOTIATION",
+        "label": "Datacite Search",
+        "acronym": "datacite-negotiated",
+        "format": "JSON"
+    },
+    "RDF_NEGOTIATED": {
+        "method": "CONTENT_NEGOTIATION",
+        "label": "Linked Data (RDF)",
+        "acronym": "rdf-negotiated",
+        "format": "RDF"
+    },
+    "XML_NEGOTIATED": {
+        "method": "CONTENT_NEGOTIATION",
+        "label": "Generic XML (Negotiated)",
+        "acronym": "xml-negotiated",
+        "format": "XML"
+    },
+    "XML_TYPED_LINKS": {
+        "method": "TYPED_LINKS",
+        "label": "Generic XML, Typed Links",
+        "acronym": "xml-type-linked",
+        "format": "XML"
+    },
+    "RDF_TYPED_LINKS": {
+        "method": "TYPED_LINKS",
+        "label": "Linked Data (RDF), Typed Links",
+        "acronym": "rdf-type-linked",
+        "format": "RDF"
+    },
+    "SCHEMAORG_TYPED_LINKS": {
+        "method": "TYPED_LINKS",
+        "label": "Schema.org JSON-LD, Typed Links",
+        "acronym": "schemaorg-type-linked",
+        "format": "JSON-LD"
+    },
+    "SIGNPOSTING_LINKS": {
+        "method": "SIGNPOSTING",
+        "label": "Signposting Typed Links",
+        "acronym": "signposting-linked"
+    },
+    "RDF_SIGNPOSTING_LINKS": {
+        "method": "SIGNPOSTING",
+        "label": "Linked Data (RDF), Signposting Links",
+        "acronym": "rdf-signposting-linked",
+        "format": "RDF"
+    },
+    "XML_SIGNPOSTING_LINKS": {
+        "method": "SIGNPOSTING",
+        "label": "Generic XML, Signposting Links",
+        "acronym": "xml-signposting-linked",
+        "format": "XML"
+    },
+    "XML_GUESSED": {
+        "label": "Guessed XML Link",
+        "acronym": "xml-guessed",
+        "format": "XML"
+    },
+    "OAI_ORE": {
+        "method": "TYPED_LINKS",
+        "label": "OAI-ORE",
+        "acronym": "oai-ore",
+        "format": "XML"
+    }
+}
