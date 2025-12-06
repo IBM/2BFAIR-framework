@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from tobefair_backend.utils.request_helper import RequestHelper
 from tobefair_framework.core.collector.digital_object_collector import (
     DigitalObjectCollector,

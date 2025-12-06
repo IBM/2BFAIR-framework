@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 

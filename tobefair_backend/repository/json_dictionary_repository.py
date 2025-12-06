@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 import json
 from abc import ABC, abstractmethod
 from typing import Generic, List, TypeVar

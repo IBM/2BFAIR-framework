@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from tobefair_backend.constants import METADATA_OFFERING_METHOD_PATH
 from tobefair_backend.repository.json_dictionary_repository import (
     JsonDictionaryRepository,

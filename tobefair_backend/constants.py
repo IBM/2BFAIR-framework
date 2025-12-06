@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 EVALUATORS_PACKAGE: str = "src.principle_evaluators"
 MAXIMUM_RESPONSE_SIZE = 1_000_000
 FILE_FORMAT_PATH = "database/file_formats.json"
