@@ -40,7 +40,7 @@ eval "$(pyenv virtualenv-init -)"
 
 ## Installation
 
-### Package installation
+### How to install the framework as a library
 
 ```sh
 # assuming you have an SSH key set up on GitHub
@@ -48,6 +48,7 @@ pip install "git+ssh://git@github.com/IBM/2BFAIR-framework.git@main"
 ```
 
 ### Suggested setup for development
+
 ```sh
 pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
@@ -56,3 +57,24 @@ pip install -e .
 pre-commit install
 ```
 
+## 2BFAIR_backend implementation
+
+To run 2BFAIR_backend implementation.
+
+- Install the required libraries: `pip install -r tobefair_backend_requirements.txt`
+- Using Visual Studio Code, configure the following debug option:
+
+```json
+"configurations": [
+        {
+            "name": "Python Debugger: FastAPI",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "tobefair_backend.service.main:app",
+                "--reload"
+            ],
+            "jinja": true,
+        },
+```
