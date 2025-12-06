@@ -53,7 +53,7 @@ class CommunityMetadataEvaluator(PrincipleEvaluator):
             self._evaluate_multidisciplinary_community_endorsed_metadata_r1_3_01m_3(
                 metadata_standard, standards_1
             ),
-            self._evaluate_community_specific_metadata_f1_3_01m_1(
+            self._evaluate_community_specific_metadata_r1_3_01m_1(
                 metadata_standard, standards_2
             ),
             self._evaluate_community_endorsed_file_format_used_r1_3_02d_1(
@@ -99,7 +99,7 @@ class CommunityMetadataEvaluator(PrincipleEvaluator):
             return test_configuration.make_failed_test_result()
 
     @fairness_test(FAIRnessTestIDs.R1_3_01M_1_community_specific_metadata.value)
-    def _evaluate_community_specific_metadata_f1_3_01m_1(
+    def _evaluate_community_specific_metadata_r1_3_01m_1(
         self,
         metadata_standard: MetadataStandard | None,
         community_required_metadata_standards: Iterable[MetadataStandard],

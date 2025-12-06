@@ -32,14 +32,14 @@ class DetailedProvenanceMetadataEvaluator(PrincipleEvaluator):
             else None
         )
         return [
-            self._evaluate_provenance_information_f1_2_01m_1(metadata_record),
-            self._evaluate_metadata_schema_f1_2_01m_2(
+            self._evaluate_provenance_information_r1_2_01m_1(metadata_record),
+            self._evaluate_metadata_schema_r1_2_01m_2(
                 metadata_standard=metadata_standard
             ),
         ]
 
     @fairness_test(FAIRnessTestIDs.R1_2_01M_1_provenance_information_available.value)
-    def _evaluate_provenance_information_f1_2_01m_1(
+    def _evaluate_provenance_information_r1_2_01m_1(
         self, metadata_record: MetadataRecord | None
     ) -> TestResult:
         test_id = FAIRnessTestIDs.R1_2_01M_1_provenance_information_available.value
@@ -86,7 +86,7 @@ class DetailedProvenanceMetadataEvaluator(PrincipleEvaluator):
             return test_configuration.make_missing_requirements_test_result()
 
     @fairness_test(FAIRnessTestIDs.R1_2_01M_2_metadata_comply_to_standard_schema.value)
-    def _evaluate_metadata_schema_f1_2_01m_2(
+    def _evaluate_metadata_schema_r1_2_01m_2(
         self, metadata_standard: MetadataStandard | None
     ) -> TestResult:
         test_id = FAIRnessTestIDs.R1_2_01M_2_metadata_comply_to_standard_schema.value

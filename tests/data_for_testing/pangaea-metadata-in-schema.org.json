@@ -1,0 +1,99 @@
+{
+    "@context": "http://schema.org/",
+    "@id": "https://doi.org/10.1594/PANGAEA.908011",
+    "@type": "Dataset",
+    "identifier": "https://doi.org/10.1594/PANGAEA.908011",
+    "url": "https://doi.pangaea.de/10.1594/PANGAEA.908011",
+    "creator": {
+        "@id": "https://orcid.org/0000-0003-3000-0020",
+        "@type": "Person",
+        "name": "Robert Huber",
+        "familyName": "Huber",
+        "givenName": "Robert",
+        "identifier": "https://orcid.org/0000-0003-3000-0020",
+        "email": "rhuber@uni-bremen.de"
+    },
+    "name": "Maximum diameter of Neogloboquadrina pachyderma sinistral from surface sediment samples from the Norwegian-Greenland Sea",
+    "publisher": {
+        "@type": "Organization",
+        "name": "PANGAEA",
+        "disambiguatingDescription": "Data Publisher for Earth & Environmental Science",
+        "url": "https://www.pangaea.de/"
+    },
+    "includedInDataCatalog": {
+        "@type": "DataCatalog",
+        "name": "PANGAEA",
+        "disambiguatingDescription": "Data Publisher for Earth & Environmental Science",
+        "url": "https://www.pangaea.de/"
+    },
+    "datePublished": "2019-11-01",
+    "description": "This data set contains unpublished measurements of the maximum diameter of shells of the planktic foraminifer Neogloboquadrina pachyderma sin. carried out on surface sediment samples from the Norwegian-Greenland Sea.",
+    "abstract": "This data set contains unpublished measurements of the maximum diameter of shells of the planktic foraminifer Neogloboquadrina pachyderma sin. carried out on surface sediment samples from the Norwegian-Greenland Sea.",
+    "spatialCoverage": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoShape",
+            "box": "53.538333333333 -31.086333333333 85.3277 15.74933",
+            "elevation": "-4457.0m/-898.0m"
+        }
+    },
+    "temporalCoverage": "1984-08-10T00:00:00/1993-09-09T00:00:00",
+    "size": {
+        "@type": "QuantitativeValue",
+        "value": 902.0,
+        "unitText": "data points"
+    },
+    "variableMeasured": [
+        {
+            "@type": "PropertyValue",
+            "name": "Event label"
+        },
+        {
+            "@type": "PropertyValue",
+            "name": "Neogloboquadrina pachyderma sinistral, maximum diameter",
+            "unitText": "µm",
+            "measurementTechnique": "Scanning electron microscope (SEM)",
+            "subjectOf": {
+                "@type": "DefinedTermSet",
+                "hasDefinedTerm": [
+                    {
+                        "@type": "DefinedTerm",
+                        "name": "maximum"
+                    },
+                    {
+                        "@id": "urn:obo:pato:term:0001334",
+                        "@type": "DefinedTerm",
+                        "identifier": "urn:obo:pato:term:0001334",
+                        "name": "diameter",
+                        "url": "http://purl.obolibrary.org/obo/PATO_0001334"
+                    },
+                    {
+                        "@id": "http://qudt.org/1.1/vocab/quantity#Length",
+                        "@type": "DefinedTerm",
+                        "identifier": "http://qudt.org/1.1/vocab/quantity#Length",
+                        "name": "Length",
+                        "alternateName": "L",
+                        "url": "http://dbpedia.org/resource/Length"
+                    }
+                ]
+            }
+        }
+    ],
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "conditionsOfAccess": "unrestricted",
+    "isAccessibleForFree": true,
+    "inLanguage": "en",
+    "distribution": [
+        {
+            "@type": "DataDownload",
+            "encodingFormat": "text/html",
+            "contentUrl": "https://doi.pangaea.de/10.1594/PANGAEA.908011?format=html"
+        },
+        {
+            "@type": "DataDownload",
+            "encodingFormat": "text/tab-separated-values",
+            "contentUrl": "https://doi.pangaea.de/10.1594/PANGAEA.908011?format=textfile"
+        }
+    ]
+}
+

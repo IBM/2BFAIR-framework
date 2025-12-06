@@ -1,0 +1,78 @@
+{
+    "BibTeX": {
+    "acronym": "BibTeX",
+    "field_of_science": [],
+    "id": "bibtex-format",
+    "identifier": [
+        {
+        "type": "local",
+        "value": "fuji:m34"
+        },
+        {
+        "type": "local",
+        "value": "https://doi.org/10.25504/FAIRsharing.bdf2fe"
+        },
+        {
+        "type": "homepage",
+        "value": "http://www.bibtex.org/"
+        },
+        {
+        "type": "namespace",
+        "value": "http://clarin-pl.eu/ns/experimental/bibtex"
+        },
+        {
+        "type": "namespace",
+        "value": "http://lindat.mff.cuni.cz/ns/experimental/bibtex"
+        },
+        {
+        "type": "namespace",
+        "value": "http://repository.clarin.dk/ns/experimental/bibtex"
+        }
+    ],
+    "subject_areas": null,
+    "urls": [
+        "http://www.bibtex.org/",
+        "http://clarin-pl.eu/ns/experimental/bibtex",
+        "http://lindat.mff.cuni.cz/ns/experimental/bibtex",
+        "http://repository.clarin.dk/ns/experimental/bibtex"
+    ]
+    },
+    "Schema.org": {
+    "acronym": "schemaorg",
+    "field_of_science": [
+        "sciences"
+    ],
+    "id": "schemaorg",
+    "identifier": [
+        {
+        "type": "local",
+        "value": "https://doi.org/10.25504/FAIRsharing.hzdzq8"
+        },
+        {
+        "type": "local",
+        "value": "msc:m101"
+        },
+        {
+        "type": "namespace",
+        "value": "https://schema.org"
+        },
+        {
+        "type": "namespace",
+        "value": "http://schema.org"
+        },
+        {
+        "type": "homepage",
+        "value": "https://schema.org/docs/schemas.html"
+        }
+    ],
+    "subject_areas": [
+        "Multidisciplinary"
+    ],
+    "urls": [
+        "https://schema.org",
+        "http://schema.org",
+        "https://schema.org/docs/documents.html",
+        "https://schema.org/docs/schemas.html"
+    ]
+    }
+}
