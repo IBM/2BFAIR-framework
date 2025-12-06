@@ -1,7 +1,9 @@
 bs4==0.0.2
 extruct==0.16.0
-jmespath==1.0.1
 fastapi==0.121.0
+jmespath==1.0.1
+lxml==5.1.0
+lxml_html_clean==0.4.0
 python-mimeparse==1.6.0
 tika==2.6.0
 types-jmespath==1.0.2.20240106

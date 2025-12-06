@@ -1,0 +1,778 @@
+{
+  "F": {
+    "id": "F",
+    "name": "Findability",
+    "principles": {
+      "F1": {
+        "id": "F1",
+        "name": "(meta)data are assigned a globally unique and persistent identifier.",
+        "metrics": {
+          "F1-01MD": {
+            "alternate_test_behavior": "fail",
+            "id": "F1-01MD",
+            "name": "Metadata and data is assigned a globally unique identifier.",
+            "scoring_mechanism": "alternative",
+            "priority": "Essential",
+            "tests": {
+              "F1-01MD-1": {
+                "id": "F1-01MD-1",
+                "name": "Identifier may conform to a UUID or HASH-type syntax.",
+                "description_for_passed": "Identifier conforms to a UUID or HASH-type syntax.",
+                "description_for_failure": "Identifier did not conform to a UUID or HASH-type syntax.",
+                "max_score": 0.5,
+                "maturity": "Moderate",
+                "recommendation": {
+                  "value": "The identifier may conform to a UUID or HASH syntax, although a globally unique identifier (GUID) is preferable. A GUID is unique, irrespective of the context."
+                },
+                "recommendation_details": "These identifiers are not, however, guaranteed to be globally unique: some other resource might have the same identifier. For a higher degree of FAIRness, consider defining an identifier that is guaranteed to globally uniquely identify a particular resource irrespective of the context, i.e., no distinct object has the same identifier.",
+                "losses": "Without a unique identifier of any kind, there is no guarantee that resources with the same identifier provisioned by different sources represent the same subject."
+              },
+              "F1-01MD-2": {
+                "id": "F1-01MD-2",
+                "name": "Identifier should conform to a defined unique identifier syntax.",
+                "description_for_passed": "Identifier conformed to a defined unique identifier syntax (IRI, URL).",
+                "description_for_failure": "Identifier did not conform to a defined unique identifier syntax (IRI, URL).",
+                "max_score": 1,
+                "maturity": "Advanced",
+                "recommendation": {
+                  "value": "Define a globally unique identifier (GUID) for the resources, i.e., an identifier that is unique irrespective of context."
+                },
+                "recommendation_details": "Define identifiers guaranteed to globally uniquely identify a particular resource irrespective of the context, i.e., no distinct object has the same identifier. Examples of GUIDs include URL, PURL, DOI, ARK, and Handle System ID. The use of a GUID results in an Advanced maturity level. As an alternative, you can use a UUID or hash; however, they do not ensure uniqueness irrespective of context, which results in an Initial maturity level.",
+                "losses": "Without a globally unique identifier, there is no guarantee that resources with the same identifier provisioned by different sources represent the same subject."
+              }
+            }
+          },
+          "F1-02MD": {
+            "id": "F1-02MD",
+            "name": "Metadata and data is assigned a persistent identifier.",
+            "priority": "Essential",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "F1-02MD-1": {
+                "id": "F1-02MD-1",
+                "name": "Identifier should conform to a defined persistent identifier syntax.",
+                "description_for_passed": "Identifier conformed to a defined persistent identifier syntax.",
+                "description_for_failure": "Identifier did not conform to a defined persistent identifier syntax.",
+                "max_score": 1,
+                "maturity": "Advanced",
+                "recommendation": {
+                  "value": "Create identifiers that are Globally Unique, Persistent, and Resolvable (GUPRI)."
+                },
+                "recommendation_details": "Define identifiers that are guaranteed to remain valid over a period of time ensured by an institutional commitment, e.g., PURL, DOI, ARK, Handle System ID, etc. Besides persistence, the identifier should be resolvable, i.e., if you make a GET request on the identifier, you receive a landing page with metadata containing further information on how to access the data content. In some cases, the identifier may resolve to a downloadable artifact, or none if the data or repository is no longer maintained. Note that although a URL is a GUID, it may not be persistent since the resource may not be accessible (the link rot problem) or the resource available under the original URL may be changed (the content drift problem). A Globally Unique, Persistent, and Resolvable Identifier (GUPRI) is considered optimal for FAIR compliance. It is a best practice to have a PID resolve to a landing page instead of its actual content.",
+                "losses": "Without a persistent identifier (PID), there is no guarantee that the resource remains stable and resolvable for the long term."
+              }
+            }
+          }
+        }
+      },
+      "F2": {
+        "id": "F2",
+        "name": "Data are described with rich metadata.",
+        "metrics": {
+          "F2-01M": {
+            "id": "F2-01M",
+            "name": "Metadata includes descriptive core elements to support findability.",
+            "priority": "Essential",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "F2-01M-1": {
+                "id": "F2-01M-1",
+                "name": "Citation metadata should be available.",
+                "description_for_passed": "Citation metadata was available.",
+                "description_for_failure": "Citation metadata was not available.",
+                "recommendation": {
+                  "value": "Describe your data with citation metadata elements."
+                },
+                "recommendation_details": "Describe your data with citation metadata elements, such as object identifier, object type, title, publisher, and publication date. The citation metadata is domain-agnostic and defined based on guidelines and recommendations in the literature.",
+                "losses": "Without citation metadata, resources would not have the minimum information that enables citation.",
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": [
+                        "dataset",
+                        "https://schema.org/dataset",
+                        "http://schema.org/dataset"
+                      ],
+                      "citation_metadata": [
+                        "creator",
+                        "name",
+                        "identifier",
+                        "datePublished",
+                        "publisher",
+                        "@type"
+                      ],
+                      "recommendation_for_missing": {
+                        "creator": "Add to the metadata an object with name 'creator' that has a key with name 'name' and value equals to the name of the digital object's creator.",
+                        "name": "Add to the metadata an element with name 'name' and value equals to the title of your digital object.",
+                        "identifier": "Add to the metadata an element with name 'identifier' and value equals to the identifier of your digital object.",
+                        "datePublished": "Add to the metadata an element with name 'datePublished' and value equals to the publication date of your digital object.",
+                        "publisher": "Add to the metadata an element with name 'publisher' and value equals to the information about the publisher of your digital object.",
+                        "@type": "Add to the metadata an element with name '@type' and value equals to the type of your digital object."
+                      }
+                    },
+                    {
+                      "types": ["default"],
+                      "citation_metadata": [
+                        "creator",
+                        "name",
+                        "identifier",
+                        "datePublished",
+                        "publisher",
+                        "@type"
+                      ],
+                      "recommendation_for_missing": {
+                        "creator": "Add to the metadata an object with name 'creator' that has a key with name 'name' and value equals to the name of the digital object's creator.",
+                        "name": "Add to the metadata an element with name 'name' and value equals to the title of your digital object.",
+                        "identifier": "Add to the metadata an element with name 'identifier' and value equals to the identifier of your digital object.",
+                        "datePublished": "Add to the metadata an element with name 'datePublished' and value equals to the publication date of your digital object.",
+                        "publisher": "Add to the metadata an element with name 'publisher' and value equals to the information about the publisher of your digital object.",
+                        "@type": "Add to the metadata an element with name '@type' and value equals to the type of your digital object."
+                      }
+                    }
+                  ]
+                },
+                "max_score": 0.5,
+                "maturity": "Moderate"
+              },
+              "F2-01M-2": {
+                "id": "F2-01M-2",
+                "name": "Core descriptive metadata should be available.",
+                "description_for_passed": "Core descriptive metadata was available.",
+                "description_for_failure": "Core descriptive metadata was not available.",
+                "recommendation": {
+                  "value": "Describe your data with core descriptive metadata elements."
+                },
+                "recommendation_details": "Describe your data with core metadata elements, such as object identifier, object type, title, publisher, publication date, description, and keywords. The core metadata is the minimum descriptive information required to enable data finding, including citation, which makes it easier to find data. They are domain-agnostic and defined based on guidelines and recommendations in the literature.",
+                "losses": "Without core descriptive metadata, resources would not have the minimum information that enables finding.",
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": [
+                        "dataset",
+                        "https://schema.org/dataset",
+                        "http://schema.org/dataset"
+                      ],
+                      "description_metadata": [
+                        "creator",
+                        "name",
+                        "identifier",
+                        "datePublished",
+                        "publisher",
+                        "@type",
+                        "description",
+                        "keywords"
+                      ],
+                      "recommendation_for_missing": {
+                        "creator": "Add to the metadata an element with name 'creator' that has a key with name 'name' and value equals to the name of the digital object's creator.",
+                        "name": "Add to the metadata an element with name 'name' and value equals to the title of your digital object.",
+                        "identifier": "Add to the metadata an element with name 'identifier' and value equals to the identifier of your digital object.",
+                        "datePublished": "Add to the metadata an element with name 'datePublished' and value equals to the publication date of your digital object.",
+                        "publisher": "Add to the metadata an element with name 'publisher' and value equals to the information about the publisher of your digital object.",
+                        "@type": "Add to the metadata an element with name '@type' and value equals to the type of your digital object.",
+                        "description": "Add to the metadata an element with name 'description' and value equals to the description of your digital object.",
+                        "keywords": "Add to the metadata an element with name 'keywords' and value equals to the keywords of your digital object."
+                      }
+                    },
+                    {
+                      "types": ["default"],
+                      "description_metadata": [
+                        "creator",
+                        "name",
+                        "identifier",
+                        "datePublished",
+                        "publisher",
+                        "@type",
+                        "description",
+                        "keywords"
+                      ],
+                      "recommendation_for_missing": {
+                        "creator": "Add to the metadata an object with name 'creator' that has a key with name 'name' and value equals to the name of the digital object's creator.",
+                        "name": "Add to the metadata an element with name 'name' and value equals to the title of your digital object.",
+                        "identifier": "Add to the metadata an element with name 'identifier' and value equals to the identifier of your digital object.",
+                        "datePublished": "Add to the metadata an element with name 'datePublished' and value equals to the publication date of your digital object.",
+                        "publisher": "Add to the metadata an element with name 'publisher' and value equals to the information about the publisher of your digital object.",
+                        "@type": "Add to the metadata an element with name '@type' and value equals to the type of your digital object.",
+                        "description": "Add to the metadata an element with name 'description' and value equals to the description of your digital object.",
+                        "keywords": "Add to the metadata an element with name 'keywords' and value equals to the keywords of your digital object."
+                      }
+                    }
+                  ]
+                },
+                "max_score": 0.5,
+                "maturity": "Advanced"
+              }
+            }
+          }
+        }
+      },
+      "F3": {
+        "id": "F3",
+        "name": "Metadata clearly and explicitly include the identifier of the data it describes.",
+        "metrics": {
+          "F3-01M": {
+            "id": "F3-01M",
+            "name": "Metadata includes the identifier of the data it describes.",
+            "priority": "Essential",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "F3-01M-1": {
+                "id": "F3-01M-1",
+                "name": "Metadata should clearly and explicitly include the identifier of the data it describes.",
+                "description_for_passed": "Metadata included the identifier of the data it describes.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "description_for_failure": "Metadata did not include the identifier of the data it describes.",
+                "recommendation": {
+                  "value": "Include an identifier of the described data in the metadata."
+                },
+                "recommendation_details": "Describe data with metadata that explicitly specifies the identifier of the data. Users should be able to discover and access the data through the metadata. Currently, 2BFAIR evaluates metadata serialized using schema.org in JSON-LD. For this metric it checks if the used schema.org type is 'Dataset' and if the property 'distribution' is present in the metadata.",
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": [
+                        "dataset",
+                        "https://schema.org/dataset",
+                        "http://schema.org/dataset"
+                      ],
+                      "fields_to_search": ["distribution"]
+                    }
+                  ]
+                },
+                "losses": "Without an identifier to the described data, it becomes more difficult to find.",
+                "max_score": 1,
+                "maturity": "Moderate"
+              }
+            }
+          },
+          "F3-02M": {
+            "id": "F3-02M",
+            "name": "Metadata includes an identifier of the metadata itself.",
+            "priority": "Useful",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "F3-02M-1": {
+                "id": "F3-02M-1",
+                "name": "Metadata may clearly and explicitly include the identifier of the metadata itself.",
+                "description_for_passed": "Metadata included an identifier of the metadata itself.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "description_for_failure": "Metadata did not include an identifier of the metadata itself.",
+                "recommendation": {
+                  "value": "Include in the metadata an identifier of the metadata itself."
+                },
+                "recommendation_details": "Describe data with metadata that explicitly specifies the identifier of the metadata itself. Users should be able to discover and access the metadata through the metadata. For this metric, 2BFAIR checks whether the string corresponding to the metadata identifier is present as a term in the metadata.",
+                "losses": "Without an identifier of the digital resource in the metadata, it becomes more difficult to find.",
+                "max_score": 1,
+                "maturity": "Advanced",
+                "skip": true
+              }
+            }
+          }
+        }
+      },
+      "F4": {
+        "id": "F4",
+        "name": "Metadata are registered or indexed in a searchable source.",
+        "metrics": {
+          "F4-01M": {
+            "id": "F4-01M",
+            "name": "Metadata are offered in such a way that they can be registered or indexed by search engines.",
+            "priority": "Essential",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "F4-01M-1": {
+                "id": "F4-01M-1",
+                "name": "Metadata should be offered in such a way that they can be registered or indexed by search engines.",
+                "description_for_passed": "Metadata were offered in such a way that they could be registered or indexed by search engines.",
+                "description_for_failure": "Metadata were not offered in such a way that they can be registered or indexed by search engines.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "recommendation": {
+                  "value": "Expose your metadata in such a way that they can be registered or indexed by search engines."
+                },
+                "recommendation_details": "Metadata for digital objects should be accessible through well-known, large-scale catalogs and search engines such as Google and Bing. Therefore, the metadata should be tailored to meet the requirements of these search engines. Currently, 2BFAIR follows Google's guidelines for Dataset and Article metadata, which should be structured according to schema.org and include, at a minimum, some required properties. Additionally, 2BFAIR evaluates whether this metadata is provided in JSON-LD format, although other format options are also available.",
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": [
+                        "dataset",
+                        "https://schema.org/dataset",
+                        "http://schema.org/dataset"
+                      ],
+                      "required_properties": ["name", "description"]
+                    },
+                    {
+                      "types": ["article"],
+                      "required_properties": []
+                    }
+                  ]
+                },
+                "losses": "Without metadata that allows registration or indexation in search engines, the digital object is not findable using them.",
+                "max_score": 1,
+                "maturity": "Initial"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "A": {
+    "id": "A",
+    "name": "Accessibility",
+    "principles": {
+      "A1": {
+        "id": "A1",
+        "name": "(meta)data are retrievable by their identifier using a standardized communications protocol.",
+        "metrics": {
+          "A1-01M": {
+            "id": "A1-01M",
+            "name": "Metadata contains access level and access conditions of the data.",
+            "scoring_mechanism": "cumulative",
+            "priority": "Essential",
+            "tests": {
+              "A1-01M-1": {
+                "id": "A1-01M-1",
+                "name": "Information about access restrictions or rights can be identified in metadata.",
+                "description_for_passed": "Information about access restrictions or rights was identified in metadata.",
+                "description_for_failure": "Information about access restrictions or rights was not identified in metadata.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "max_score": 1,
+                "maturity": "Moderate",
+                "recommendation": {
+                  "value": "Add to the metadata information on access level and conditions of the data."
+                },
+                "recommendation_details": "This information will specify if the access level to the data is public, embargoed, restricted or if access is allowed only to the metadata. Currently, 2BFAIR only evaluates if the metadata has a key 'conditionsOfAccess' or an object 'access' with a key 'status' with the information about access restrictions.",
+                "losses": "Information on the access level and conditions of the data are necessary to gain access to the data.",
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": ["default"],
+                      "fields_to_search": ["conditionsOfAccess"]
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "A1-02M": {
+            "id": "A1-02M",
+            "name": "Metadata are retrievable by their identifier",
+            "scoring_mechanism": "cumulative",
+            "priority": "Essential",
+            "tests": {
+              "A1-02M-1": {
+                "id": "A1-02M-1",
+                "name": "Identifier URL should resolve to a landing page.",
+                "description_for_passed": "Identifier URL resolved to a landing page.",
+                "description_for_failure": "Identifier URL did not resolve to a landing page.",
+                "max_score": 1,
+                "maturity": "Moderate",
+                "recommendation": {
+                  "value": "Create identifiers that are resolvable, e.g., that resolve to a landing page."
+                },
+                "recommendation_details": "The identifier should be resolvable, i.e., if you make a GET request on the identifier, you receive a landing page with metadata containing further information on how to access the data content. In some cases, the identifier may resolve to a downloadable artifact, or none if the data or repository is no longer maintained. It is a best practice to have a PID resolve to a landing page instead of its actual content.",
+                "losses": "Without a resolvable identifier, it is more difficult to access the resource's content."
+              }
+            }
+          },
+          "A1-03MD": {
+            "id": "A1-03MD",
+            "name": "A standardized communication protocol is used to access metadata and data.",
+            "scoring_mechanism": "cumulative",
+            "priority": "Essential",
+            "tests": {
+              "A1-03MD-1": {
+                "id": "A1-03MD-1",
+                "name": "Identifier leading to metadata matches a scheme indicating standardized web communication protocol.",
+                "description_for_passed": "Identifier matches a scheme indicating standardized web communication protocols.",
+                "description_for_failure": "Identifier does not matches a scheme indicating standardized web communication protocols.",
+                "max_score": 0.5,
+                "maturity": "Moderate",
+                "recommendation": {
+                  "value": "Use a link for your landing page that is based on a standardized web communications protocol."
+                },
+                "recommendation_details": "Some standardized web communications protocols are HTTP, HTTPS and FTP.",
+                "losses": "Without a landing page link based on standardized web communication protocols, accessing the landing page may be more difficult."
+              },
+              "A1-03MD-2": {
+                "id": "A1-03MD-2",
+                "name": "Identifier leading to data are matching a schema indicating a standardized web communication protocol.",
+                "description_for_passed": "Identifier leading to data matches a scheme indicating standardized web communication protocols.",
+                "description_for_failure": "Identifier leading to data does not matches a scheme indicating standardized web communication protocols.",
+                "description_for_missing_information": "Metadata or links to the data record in metadata were not found.",
+                "max_score": 0.5,
+                "maturity": "Moderate",
+                "recommendation": {
+                  "value": "Use a link for your data that is based on a standardized web communications protocol."
+                },
+                "recommendation_details": "Some standardized web communications protocols are HTTP, HTTPS and FTP.",
+                "losses": "Without a link to the data based on standardized web communication protocols, accessing the data may be more difficult."
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "I": {
+    "id": "I",
+    "name": "Interoperability",
+    "principles": {
+      "I1": {
+        "id": "I1",
+        "name": "(meta)data use a formal, accessible, shared, and broadly applicable language for knowledge representation.",
+        "metrics": {
+          "I1-01M": {
+            "id": "I1-01M",
+            "name": "Metadata is represented using a formal knowledge representation language.",
+            "priority": "Important",
+            "scoring_mechanism": "alternative",
+            "tests": {
+              "I1-01M-1": {
+                "id": "I1-01M-1",
+                "name": "Parsable, structured metadata (JSON-LD, RDFa) is embedded in the landing page XHTML/HTML code.",
+                "description_for_passed": "Parsable, structured metadata is embedded in the landing page code.",
+                "description_for_failure": "Parsable, structured metadata is not embedded in the landing page code.",
+                "recommendation": {
+                  "value": "Embed parsable, structured metadata in the landing page code."
+                },
+                "recommendation_details": "You can make parsable, structured metadata using JSON-LD or RDFa format to describe your metadata. Currently, 2BFAIR only evaluates metadata serialized using schema.org in JSON-LD.",
+                "losses": "Without parsable metadata, machines will be unable to process the data in a meaningful way, reducing data exchange possibilities.",
+                "max_score": 1,
+                "maturity": "Moderate"
+              }
+            }
+          }
+        }
+      },
+      "I2": {
+        "id": "I2",
+        "name": "(Meta)data use vocabularies that follow FAIR principles.",
+        "metrics": {
+          "I2-01M": {
+            "id": "I2-01M",
+            "name": "Metadata uses registered semantic resources.",
+            "priority": "Important",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "I2-01M-1": {
+                "id": "I2-01M-1",
+                "name": "Vocabulary namespace URIs can be identified in metadata.",
+                "description_for_passed": "Schema.org was identified as the vocabulary used for the metadata.",
+                "description_for_failure": "Schema.org was not identified as the vocabulary used for the metadata.",
+                "recommendation": {
+                  "value": "Use schema.org as the vocabulary to convey your metadata."
+                },
+                "recommendation_details": "",
+                "losses": "Without a vocabulary namespace, we do not know the origin of a term, which can lead to ambiguity and makes data search difficult.",
+                "agnostic_requirements": {
+                  "accepted_namespaces": ["Schema.org"]
+                },
+                "max_score": 1,
+                "maturity": "Initial"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "R": {
+    "id": "R",
+    "name": "Reusability",
+    "principles": {
+      "R1": {
+        "id": "R1",
+        "name": "Metadata are richly described with a plurality of accurate and relevant attributes.",
+        "metrics": {
+          "R1-01M": {
+            "id": "R1-01M",
+            "name": "Metadata specifies the content of the data.",
+            "priority": "Essential",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "R1-01M-1": {
+                "id": "R1-01M-1",
+                "name": "Minimum information (resource type) about the available data content is specified in the metadata.",
+                "description_for_passed": "Resource type of data content was specified in metadata.",
+                "description_for_failure": "Resource type of data content was not specified in metadata.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "recommendation": {
+                  "value": "Include minimal information about the data content in the metadata."
+                },
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": ["default"],
+                      "resource_type": ["@type"],
+                      "recommendation_for_missing": {
+                        "@type": "Add to the metadata an element with name '@type' and value equals to the type of your digital object."
+                      }
+                    }
+                  ]
+                },
+                "recommendation_details": "One of the minimal information that can be included is the resource type of the data.",
+                "losses": "Without minimal information, possible users of the data may have very little knowledge about it, making it more difficult to reuse.",
+                "max_score": 0.5,
+                "maturity": "Initial"
+              },
+              "R1-01M-2": {
+                "id": "R1-01M-2",
+                "name": "Information on the manner and form (file size and type) in which data is delivered is provided.",
+                "description_for_passed": "File type and size were specified in metadata.",
+                "description_for_failure": "File size and type were not specified in metadata.",
+                "description_for_missing_information": "Test not executed: No data record found.",
+                "recommendation": {
+                  "value": "Include file size and type information in your metadata."
+                },
+                "recommendation_details": "",
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": ["default"],
+                      "type_attributes": [
+                        "distribution[*].encodingFormat",
+                        "distribution[*].fileFormat"
+                      ],
+                      "size_attributes": [
+                        "contentSize",
+                        "size",
+                        "distribution[*].contentSize"
+                      ]
+                    }
+                  ]
+                },
+                "losses": "Without information on the size and type of the data, it may be more difficult to reuse.",
+                "max_score": 0.5,
+                "maturity": "Moderate"
+              },
+              "R1-01M-3": {
+                "id": "R1-01M-3",
+                "name": "Measured variable is specified in the metadata.",
+                "description_for_passed": "Measured variable was specified in the metadata.",
+                "description_for_failure": "Measured variable was not specified in the metadata.",
+                "description_for_missing_information": "Test not executed: No data record found.",
+                "recommendation": {
+                  "value": "Include the variable your data measures in your metadata."
+                },
+                "recommendation_details": "",
+                "losses": "Without information on the variable measured by the data, it may be more difficult to reuse.",
+                "max_score": 0,
+                "maturity": "Moderate"
+              },
+              "R1-01M-4": {
+                "id": "R1-01M-4",
+                "name": "Data content matches file type specified in metadata.",
+                "description_for_passed": "Data content matched file type specified in metadata.",
+                "description_for_failure": "Data content did not match file type specified in metadata.",
+                "description_for_missing_information": "Test not executed: No data record found.",
+                "recommendation": {
+                  "value": "In the metadata, specify a file type that matches the data content being described."
+                },
+                "recommendation_details": "Check the data content file format, and add these values to the metadata.",
+                "losses": "Inaccurate metadata may not reflect properties of the data content that are interesting to possible users, reducing reuse of the data.",
+                "max_score": 0,
+                "maturity": "Advanced"
+              },
+              "R1-01M-5": {
+                "id": "R1-01M-5",
+                "name": "Data content matches file size specified in metadata.",
+                "description_for_passed": "Data content matched file size specified in metadata.",
+                "description_for_failure": "Data content did not match file size specified in metadata.",
+                "description_for_missing_information": "Test not executed: No data record found.",
+                "recommendation": {
+                  "value": "In the metadata, specify a file size that matches the data content being described."
+                },
+                "recommendation_details": "Check the data content file size, and add this value to the metadata.",
+                "losses": "Inaccurate metadata may not reflect properties of the data content that are interesting to possible users, reducing reuse of the data.",
+                "max_score": 0,
+                "maturity": "Advanced"
+              },
+              "R1-01M-6": {
+                "id": "R1-01M-6",
+                "name": "Data content matches measured variables or observation types specified in metadata.",
+                "description_for_passed": "Data content matched measured variables or observation types specified in metadata.",
+                "description_for_failure": "Data content did not match measured variables or observation types specified in metadata.",
+                "description_for_missing_information": "Test not executed: No data record found.",
+                "recommendation": {
+                  "value": "In the metadata, define measured variables and observation types that match those of the data content."
+                },
+                "recommendation_details": "",
+                "losses": "Inaccurate metadata may not reflect properties of the data content that are interesting to possible users, reducing reuse of the data.",
+                "max_score": 0,
+                "maturity": "Advanced"
+              }
+            }
+          }
+        }
+      },
+      "R1.1": {
+        "id": "R1.1",
+        "name": "Metadata and data are released with a clear and accessible data usage license.",
+        "metrics": {
+          "R1.1-01M": {
+            "id": "R1.1-01M",
+            "name": "Metadata includes license information under which data can be reused.",
+            "priority": "Essential",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "R1.1-01M-1": {
+                "id": "R1.1-01M-1",
+                "name": "License information is given in an appropriate metadata element.",
+                "description_for_passed": "License information was given in an appropriate metadata element.",
+                "description_for_failure": "License information was not given in an appropriate metadata element.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "recommendation": {
+                  "value": "Include a clear data usage license information in your metadata."
+                },
+                "recommendation_details": "Create a metadata key with name license and value equal to the license of your data, e.g., key 'license' and value 'MIT'.",
+                "losses": "Without a clear usage license, users will be unsure if they are allowed to use your data.",
+                "agnostic_requirements": {
+                  "license_metadata_key": "license"
+                },
+                "max_score": 1,
+                "maturity": "Initial"
+              }
+            }
+          }
+        }
+      },
+      "R1.2": {
+        "id": "R1.2",
+        "name": "Metadata are associated with detailed provenance information.",
+        "metrics": {
+          "R1.2-01M": {
+            "id": "R1.2-01M",
+            "name": "Metadata includes provenance information about data creation or generation.",
+            "priority": "Essential",
+            "scoring_mechanism": "alternative",
+            "tests": {
+              "R1.2-01M-1": {
+                "id": "R1.2-01M-1",
+                "name": "Metadata contains elements which hold provenance information which can be mapped to PROV-O based on PROV-DC.",
+                "description_for_passed": "Metadata contains elements which hold provenance information which can be mapped to PROV-O based on PROV-DC.",
+                "description_for_failure": "Metadata does not contain elements which hold provenance information which can be mapped to PROV-O based on PROV-DC.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "recommendation": {
+                  "value": "Add provenance information to your metadata."
+                },
+                "recommendation_details": "Currently, we are evaluating creator and publishing (publisher and datePublished) as the minimum required provenance. Provenance data (also known as lineage) represents a dataset's history, including the people, entities, and processes involved in its creation, management and longer-term curation. It is essential that data producers provide provenance information about the data to enable informed use and reuse. The levels of provenance information needed can vary depending on the data type (e.g., measurement, observation, derived data, or data product) and research domains. We suggest including provenance properties related to: (i) Sources of data, e.g., datasets the data is derived from and instruments; (ii) Data creation or collection date; (iii) Contributors involved in data creation and their roles; and (iv) Data publication, modification and versioning information. There are various ways through which provenance information may be included in a metadata record (Devaraju et al., 2022).",
+                "losses": "Without provenance data, it is not clear the lineage (i.e., history) about the produced data which hampers use and reuse.",
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": ["default"],
+                      "provenance_metadata": [
+                        "creator",
+                        "publisher",
+                        "datePublished"
+                      ]
+                    }
+                  ]
+                },
+                "max_score": 1,
+                "maturity": "Initial"
+              },
+              "R1.2-01M-2": {
+                "id": "R1.2-01M-2",
+                "name": "Metadata contains elements which hold provenance information using formal provenance ontologies (PROV-O, PAV).",
+                "description_for_passed": "Metadata contains elements which hold provenance information using formal provenance ontologies (PROV-O, PAV).",
+                "description_for_failure": "Metadata does not contain elements which hold provenance information using formal provenance ontologies (PROV-O, PAV).",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "recommendation": {
+                  "value": "Make your metadata conformant to a standard provenance schema (e.g., PROV-O or PAV)."
+                },
+                "recommendation_details": "Provenance data (also known as lineage) represents a dataset's history, including the people, entities, and processes involved in its creation, management and longer-term curation. It is essential that data producers provide provenance information about the data to enable informed use and reuse. There are various ways through which provenance information may be included in a metadata record (Devaraju et al., 2022). We are evaluating the use of PROV-O and PAV.",
+                "losses": "Without using a standard schema to convey provenance information, it is not machine-readable.",
+                "agnostic_requirements": {
+                  "requirements": [
+                    {
+                      "types": ["default"],
+                      "accepted_metadata_schemas": [
+                        "http://www.w3.org/ns/prov",
+                        "http://www.w3.org/ns/prov#",
+                        "http://purl.org/pav",
+                        "http://purl.org/pav/"
+                      ]
+                    }
+                  ]
+                },
+                "max_score": 1,
+                "maturity": "Advanced"
+              }
+            }
+          }
+        }
+      },
+      "R1.3": {
+        "id": "R1.3",
+        "name": "Metadata meet domain-relevant community standards.",
+        "metrics": {
+          "R1.3-01M": {
+            "id": "R1.3-01M",
+            "name": "Metadata follows a standard recommended by the target research community of the data.",
+            "priority": "Essential",
+            "scoring_mechanism": "alternative",
+            "tests": {
+              "R1.3-01M-1": {
+                "id": "R1.3-01M-1",
+                "name": "Community-specific metadata standard can be detected using namespaces or schemas found in provided metadata.",
+                "description_for_passed": "Community-specific metadata standard was detected using namespaces or schemas found in provided metadata.",
+                "description_for_failure": "Community-specific metadata standard was not detected using namespaces or schemas found in provided metadata.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "recommendation": {
+                  "value": "Community-specific metadata should be used to encode your data to foster reusability of your data by your community."
+                },
+                "recommendation_details": "Elicit the specific metadata standards employed by your community and use them to encode your metadata. Some communities have well-established metadata standards (e.g., geospatial: ISO19115; biodiversity: DarwinCore, ABCD, EML; social science: DDI; astronomy: International Virtual Observatory Alliance Technical Specifications) while others have limited standards or standards that are under development (e.g., engineering and linguistics) (Devaraju et al., 2022).",
+                "losses": "Without community-specific metadata, the specific details of your community are not considered when conveying metadata values, and your community is not able to reuse your data.",
+                "agnostic_requirements": {
+                  "metadata_standards": ["https://schema.org"]
+                },
+                "max_score": 1,
+                "maturity": "Advanced"
+              },
+              "R1.3-01M-3": {
+                "id": "R1.3-01M-3",
+                "name": "Multidisciplinary but community-endorsed metadata standards can be detected by namespace.",
+                "description_for_passed": "Multidisciplinary but community-endorsed metadata standards were detected by namespace.",
+                "description_for_failure": "Multidisciplinary but community-endorsed metadata standards were not detected.",
+                "description_for_missing_information": "Test not executed: No metadata record found.",
+                "recommendation": {
+                  "value": "Multidisciplinary metadata standards should be used to encode your data to foster reusability."
+                },
+                "recommendation_details": "Elicit the multidisciplinary metadata standards employed by your community, and use them to encode your metadata. Currently, we are evaluating the use of schema.org.",
+                "losses": "Without the use of multidisciplinary metadata standards, other groups in multidisciplinary communities are not able to reuse your data.",
+                "agnostic_requirements": {
+                  "metadata_standards": ["https://schema.org"]
+                },
+                "max_score": 1,
+                "maturity": "Initial"
+              }
+            }
+          },
+          "R1.3-02D": {
+            "id": "R1.3-02D",
+            "name": "Data is available in a file format recommended by the target research community.",
+            "priority": "Essential",
+            "scoring_mechanism": "cumulative",
+            "tests": {
+              "R1.3-02D-1": {
+                "id": "R1.3-02D-1",
+                "name": "The format of a data file given in the metadata is listed in the long-term file formats, open file formats or scientific file formats controlled list.",
+                "description_for_passed": "Data file format is either scientific, long-term, or open.",
+                "description_for_failure": "Data file format is neither scientific, long-term, nor open.",
+                "description_for_missing_information": "Test not executed: No data records available.",
+                "recommendation": {
+                  "value": "Expose your data in a file format that is recognized by the target community."
+                },
+                "recommendation_details": "File formats recognized by the community may be long-term, scientific or open.",
+                "losses": "Exposing your data in a file format not recognized by the community may make it harder for members of the community to reuse the data.",
+                "community_requirements": {},
+                "max_score": 1.0,
+                "maturity": "Advanced"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

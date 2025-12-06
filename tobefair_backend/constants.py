@@ -15,4 +15,6 @@ SCHEMA_ORG_DATASET_TYPES = [
     "https://schema.org/dataset",
     "http://schema.org/dataset",
 ]
-FAIRNESS_CONFIGURATION_FILE_PATH = "./src/config/fairness_configuration.json"
+FAIRNESS_CONFIGURATION_FILE_PATH = (
+    "./tobefair_backend/config/fairness_configuration.json"
+)
