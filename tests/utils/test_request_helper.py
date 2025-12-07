@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 import unittest
 
 from mock import patch
@@ -69,8 +72,9 @@ class TestRequestHelper(unittest.TestCase):
     def test_get_content_type_no_header(self, mock_response):
         mock_response.headers.get.return_value = None
         mock_response.read.return_value = self.sample_response_bytes
-        content_type = self.request_helper._get_content_type(mock_response)
-        self.assertEqual(
-            self.request_helper._extract_mime_type_and_subtype(content_type),
-            "text/html",
-        )
+        if content_type := self.request_helper._get_content_type(mock_response):
+            self.assertEqual(
+                self.request_helper._extract_mime_type_and_subtype(content_type),
+                "text/html",
+            )
+        self.assertIsNotNone(content_type, "content_type should not be None")
