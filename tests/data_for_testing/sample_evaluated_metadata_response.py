@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 evaluated_metadata = {
     "@context": "http://schema.org/",
     "@id": "https://doi.org/10.1594/PANGAEA.893286",
