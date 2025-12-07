@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from unittest import TestCase
 
 from tests.data_for_testing.sample_html_response import decoded_html_body_sample

@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 from tests.evaluators.fairness_principle_evaluation_tester import (
     FAIRNESS_CONFIGURATION_FOR_TESTS,
     FAIRnessPrincipleEvaluationTester,

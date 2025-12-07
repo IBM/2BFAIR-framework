@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 import time
 import unittest
 from concurrent.futures import ThreadPoolExecutor

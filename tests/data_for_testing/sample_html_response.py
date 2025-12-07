@@ -1,3 +1,6 @@
+# Copyright (C) 2025 IBM Corp.
+# SPDX-License-Identifier: Apache-2.0
+
 html_sample = """
 <!DOCTYPE html>
 <html lang="en">
