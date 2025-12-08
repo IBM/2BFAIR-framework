@@ -78,3 +78,7 @@ To run 2BFAIR_backend implementation.
             "jinja": true,
         },
 ```
+
+## Run the OpenAPI UI
+
+- After starting the service, open the URL [http://localhost:8080/docs](http://localhost:8080/docs) in your browser, and execute the `POST /evaluate` service.
