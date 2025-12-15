@@ -51,7 +51,9 @@ To run 2BFAIR_backend implementation.
 
 - Install the framework libraries: `pip install -r requirements.txt`
 - Install the required libraries: `pip install -r tobefair_backend_requirements.txt`
-- Using Visual Studio Code, configure the following debug option:
+- Run the server:
+  - Using the command line: `uvicorn tobefair_backend.service.main:app`
+  - Using Visual Studio Code, configure the following debug option:
 
 ```json
 "configurations": [
