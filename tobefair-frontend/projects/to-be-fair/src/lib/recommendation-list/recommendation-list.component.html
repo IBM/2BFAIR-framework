@@ -1,0 +1,17 @@
+<ul>
+  @for (recommendation of recommendations; track $index) {
+    <li>
+      {{ recommendation.dimension_id }}: {{ recommendation.recommendation }}
+    </li>
+  }
+  @if (redirect_ref !== undefined && should_display_redirect) {
+    <a
+      [routerLink]="['/', redirect_ref]"
+      routerLinkActive="active_route"
+      ariaCurrentWhenActive="page"
+      id="seeMore"
+    >
+      See more in the assessment's details
+    </a>
+  }
+</ul>

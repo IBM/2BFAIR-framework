@@ -1,0 +1,175 @@
+:host div.outer {
+  padding: 1em;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightgrey;
+  border-radius: 10px;
+}
+
+/* Heading styles */
+h2 {
+  font-weight: normal;
+  margin-block-start: 0;
+}
+
+/* Horizontal rule styles */
+hr {
+  height: 1.5px;
+  background-color: black;
+  border: none;
+  margin: 0 -1em; /* Combine left and right margin into one shorthand property */
+}
+
+/* Header styles */
+header {
+  height: 50px;
+  position: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 200;
+}
+
+/* Sections styles */
+section {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container styles */
+.container {
+  position: relative;
+  margin: 0;
+  width: 250px; /*width related to .glossary width*/
+  height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+/* Navigation styles */
+.navigation {
+  padding: 25px 0px 0px 0px;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.navigation .list {
+  padding: 0;
+  margin: 0;
+}
+
+.navigation .list-item {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+.navigation a:hover {
+  color: #0f62fe;
+}
+
+.vertical-line {
+  height: calc(100vh - 140px);
+  border-left: 1.5px solid;
+}
+
+/* Glossary styles */
+.glossary {
+  width: calc(100% - 100px);
+  height: calc(100vh - 140px);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  font-size: 18px;
+}
+
+.glossary a {
+  color: #0f62fe;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.glossary a:hover {
+  color: #8a3ffc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.glossary li {
+  margin: auto auto 25px auto;
+  cursor: default;
+}
+
+.scrollable-content {
+  padding: 25px 0px 0px 16px;
+  overflow-y: hidden;
+  flex-grow: 1;
+}
+
+.scrollable-content:hover {
+  overflow-y: auto;
+}
+
+#globally-unique-identifier u {
+  color: #4589ff;
+  font-weight: normal;
+}
+
+/* References styles */
+#references {
+  list-style-type: none;
+}
+
+#references h3 {
+  font-weight: normal;
+}
+
+#references li {
+  list-style-type: none;
+}
+
+#references a {
+  color: #4589ff;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+#references a:hover {
+  color: #4589ff;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+.tool a:hover {
+  color: #8a3ffc;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.inner-list {
+  list-style-type: lower-alpha;
+  margin: 8px 16px 8px 32px;
+  font-size: 16px;
+}

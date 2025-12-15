@@ -1,0 +1,548 @@
+<div class="outer">
+  <header>
+    <h2>User Guide</h2>
+  </header>
+  <hr />
+  <div class="step-by-step">
+    The 2BFAIR-frontend is divided into eight pages:
+    <ul style="list-style-type: circle; margin: 20px">
+      <li>
+        <a href="user-guide#home"><strong>Home</strong></a
+        >: Start page where the user supplies the
+        <a href="glossary#digital-object">digital object </a>
+        <a href="glossary#identifier">identifier</a> to start its
+        <a href="glossary#FAIRness"> FAIRness </a>
+        <a href="glossary#evaluation">evaluation</a>.
+      </li>
+      <li>
+        <a href="user-guide#result"><strong>Result</strong></a
+        >: Visual representation of the overall
+        <a href="glossary#FAIRness"> FAIRness</a> result.
+      </li>
+      <li>
+        <a href="user-guide#explorer"><strong>Explorer</strong></a
+        >: Overview of the <a href="glossary#evaluation">evaluation</a> for each
+        dimension. We define F, A, I, and R as FAIR dimensions.
+      </li>
+      <li>
+        <a href="user-guide#details"><strong>Details</strong></a
+        >: Details of the <a href="glossary#evaluation">evaluation</a> for
+        <a href="glossary#principle">principles</a>,
+        <a href="glossary#metric">metrics</a>, and
+        <a href="glossary#test">tests</a>.
+      </li>
+      <li>
+        <a href="user-guide#fair-glossary"><strong>FAIR Glossary</strong></a
+        >: Presents the definition of the FAIR concepts used in the tool
+        development.
+      </li>
+      <li>
+        <a href="user-guide#tool-glossary"><strong>Tool Glossary</strong></a
+        >: Presents the explanation of some concepts used in 2BFAIR.
+      </li>
+      <li>
+        <strong>User Guide</strong>: Explanations about this page and the
+        functionality available in the 2BFAIR-frontend.
+      </li>
+      <li>
+        <a href="user-guide#full-report"><strong>Full Report</strong></a
+        >: Combination of the content from the Result, Explorer and Details
+        pages.
+      </li>
+    </ul>
+  </div>
+  <div class="pages">
+    <ul>
+      <li>
+        <h3 id="home">Home</h3>
+        <hr />
+        <div class="step-by-step">
+          <ol>
+            <li>
+              The <strong>Home</strong> page is composed of four elements:
+              <ol class="inner-list">
+                <li>
+                  A text box to enter the
+                  <a href="glossary#digital-object">digital object</a>'s
+                  <a href="glossary#identifier"> identifier</a>, which is
+                  usually a URI, URL, or GUID.
+                </li>
+                <li>
+                  A button to run the
+                  <a href="glossary#evaluation">evaluation</a>.
+                </li>
+                <li>
+                  A link to run an example
+                  <a href="glossary#evaluation">evaluation</a>.
+                </li>
+                <li>
+                  An additional resources section.
+                </li>
+              </ol>
+              <img src="../assets/user-guide/home/home-page.png" />
+            </li>
+            <li>
+              To start an <a href="glossary#evaluation">evaluation</a> fill in
+              the text box with the
+              <a href="glossary#digital-object">digital object</a>
+              <a href="glossary#identifier"> identifier</a> and click the button
+              <strong>Start an evaluation</strong>.
+              <br />
+              <br />
+              <br />
+              <img src="../assets/user-guide/home/URI.png" alt="" />
+            </li>
+          </ol>
+        </div>
+      </li>
+      <li>
+        <h3 id="result">Result</h3>
+        <hr />
+        <div class="step-by-step">
+          <ol>
+            <li>
+              The page <strong>Result</strong> is composed of three elements:
+              <ol class="inner-list">
+                <li>
+                  A badge that is a graphic representation of the overall
+                  <a href="glossary#FAIRness"> FAIRness </a>
+                  <a href="glossary#assessment"> assessment</a>.
+                </li>
+                <li>
+                  The URI that was entered as the
+                  <a href="glossary#digital-object">digital object</a>'s
+                  <a href="glossary#identifier"> identifier</a>.
+                </li>
+                <li>A button to go to the Explorer page</li>
+              </ol>
+              <img src="../assets/user-guide/result/result-page.png" />
+            </li>
+            <li>
+              Each badge's column represents the
+              <a href="glossary#FAIRness"> FAIRness </a>
+              <a href="glossary#evaluation"> evaluation</a> result achieved by
+              the
+              <a href="glossary#digital-object">digital object</a> corresponding
+              to a FAIR dimension. The number on the right of the badge
+              represents the total score as a percentage achieved by the
+              <a href="glossary#digital-object">digital object</a>, i.e., it
+              considers all evaluated FAIR dimensions.
+              <br />
+              <br />
+              <img
+                src="../assets/user-guide/result/badge.png"
+                alt=""
+                class="image-auto"
+              />
+            </li>
+            <li>
+              To learn more about your result, click the button
+              <strong
+                ><a href="glossary#FAIRness"> FAIRness</a> Explorer</strong
+              >
+              to navigate to the page Explorer.
+              <img
+                src="../assets/user-guide/result/button.png"
+                alt=""
+                class="image-auto image-margin-10"
+              />
+            </li>
+          </ol>
+        </div>
+      </li>
+      <li>
+        <h3 id="explorer">Explorer</h3>
+        <hr />
+        <div class="step-by-step">
+          <ol>
+            <li>
+              The page <strong>Explorer</strong> is composed of 4 elements:
+              <ol class="inner-list">
+                <li>
+                  <strong>Header:</strong> Presents information about the
+                  evaluated object, a link to download the
+                  <a href="glossary#evaluation">evaluation</a> result, and the
+                  <a href="glossary#FAIRness"> FAIRness</a> badge.
+                </li>
+                <li>
+                  <strong>Graph:</strong> Represents the score as a percentage
+                  achieved for each dimension with boxes representing the result
+                  achieved for each evaluated
+                  <a href="glossary#metric">metric</a> within the dimension.
+                </li>
+                <li>
+                  <strong>Legend:</strong> Explains the
+                  <a href="tool-glossary#importance-of-metric"
+                    >importance of each metric</a
+                  >
+                </li>
+                <li>
+                  <strong>Priority Recommendations:</strong> Lists the most
+                  important recommendations to improve the
+                  <a href="glossary#FAIRness"> FAIRness</a> of the
+                  <a href="glossary#digital-object">digital object</a>.
+                </li>
+              </ol>
+              <img src="../assets/user-guide/explorer/explorer-page.png" />
+            </li>
+            These elements are detailed as follows.
+            <li>
+              The header is composed of 3 elements:
+              <ol class="inner-list">
+                <li>
+                  The <a href="glossary#identifier"> identifier</a> of the
+                  evaluated <a href="glossary#resource"> resource</a>.
+                </li>
+                <li>
+                  A link to download the
+                  <a href="glossary#FAIRness"> FAIRness</a> result in JSON
+                  format.
+                </li>
+                <li>
+                  The badge with the
+                  <a href="glossary#FAIRness"> FAIRness</a> result.
+                </li>
+              </ol>
+              <img src="../assets/user-guide/explorer/header.png" />
+            </li>
+            <li>
+              The graph presents, for each dimension, the
+              <a href="glossary#metric">metrics</a> used to evaluate the digital
+              object presented as a rectangle and the score as a percentage
+              achieved by the dimension
+              <a href="glossary#evaluation">evaluation</a>. Next to each
+              dimension, there is an arrow that, if clicked, opens the Details
+              page in the section corresponding to the dimension. Each rectangle
+              depicts:
+              <ol class="inner-list">
+                <li>
+                  The <a href="glossary#metric">metric</a> ID in the middle of
+                  the rectangle.
+                </li>
+                <li>
+                  The <a href="glossary#FAIRness"> FAIRness</a> result of the
+                  <a href="glossary#metric">metric</a>, which ranges from 0 (the
+                  rectangle is not filled) to 1 (the rectangle is fully filled).
+                </li>
+                <li>
+                  The
+                  <a href="tool-glossary#importance-of-metric"
+                    >importance of the metric</a
+                  >
+                  represented by three color tones.
+                </li>
+                <li>
+                  Even though the <a href="glossary#metric">metric</a>'s score
+                  is 0, the border is presented to depict the
+                  <a href="glossary#metric">metric</a> importance.
+                </li>
+                <img
+                  src="../assets/user-guide/explorer/graph.png"
+                  class="image-auto"
+                />
+              </ol>
+            </li>
+            <li>
+              The legend represents the
+              <a href="tool-glossary#importance-of-metric"
+                >importance of the metric</a
+              >.
+              <img
+                src="../assets/user-guide/explorer/legend.png"
+                class="image-margin-10"
+                style="width: 30%"
+              />
+            </li>
+            <li>
+              Priority recommendations shows the most important recommendations
+              to follow to improve the
+              <a href="glossary#FAIRness"> FAIRness</a> level of the digital
+              object. If there are more than <strong>n</strong> priorities,
+              where n is defined in the 2BFAIR configuration, a
+              <strong>See more</strong> link is presented. When the user click
+              son this link, it opens the Details page in the dimension
+              corresponding to the first recommendation.
+              <img
+                src="../assets/user-guide/explorer/priority-recommendations.png"
+                class="image-auto"
+              />
+            </li>
+          </ol>
+        </div>
+      </li>
+      <li>
+        <h3 id="details">Details</h3>
+        <hr />
+        <div class="step-by-step">
+          <ol>
+            <li>
+              The page <strong>Details</strong> is composed of two elements:
+              <ol class="inner-list">
+                <li>The same header as in the Explorer page.</li>
+                <li>
+                  An accordion with the
+                  <a href="glossary#evaluation">evaluation</a> details, which
+                  fields are explained as follows.
+                </li>
+              </ol>
+              <img src="../assets/user-guide/details/details-page.png" />
+            </li>
+            <li>
+              The accordion is divided into three instances:
+              <ol class="inner-list">
+                <li><a href="glossary#principle">Principle</a></li>
+                <li><a href="glossary#metric">Metrics</a></li>
+                <li><a href="glossary#test">Test</a></li>
+              </ol>
+            </li>
+            <li>
+              For each <a href="glossary#principle">principle</a>, the following
+              are presented:
+              <ol class="inner-list">
+                <li>
+                  <strong>Name</strong>: the definition of the
+                  <a href="glossary#principle">principle</a>.
+                </li>
+                <li>
+                  <strong>Score:</strong> a value between 0 and 1 representing
+                  the average of the scores of all the
+                  <a href="glossary#principle">principle</a>'s
+                  <a href="glossary#metric">metrics</a> score.
+                </li>
+                <img src="../assets/user-guide/details/principle.png" alt="" />
+              </ol>
+            </li>
+            <li>
+              For each <a href="glossary#metric">metric</a>, the following are
+              presented:
+              <ol class="inner-list">
+                <li>
+                  <strong>Name</strong>: the definition of the
+                  <a href="glossary#metric">metric</a> following
+                  <a href="https://zenodo.org/records/6461229">FAIRsFAIR </a>
+                  <a href="glossary#metric"> metric</a> definition.
+                </li>
+                <li>
+                  <strong
+                    ><a href="tool-glossary#maturity"> Maturity </a></strong
+                  >
+                </li>
+                <li>
+                  <strong>Score:</strong> A value between 0 and 1 representing
+                  the average score achieved by all the
+                  <a href="glossary#FAIRness"> FAIRness</a>
+                  <a href="glossary#test">tests</a> of the
+                  <a href="glossary#metric">metric</a>.
+                </li>
+                <li>
+                  <strong>Score Mechanism</strong>: Defined
+                  <a href="tool-glossary#scoring-mechanism">here</a>, in the
+                  tool glossary.
+                </li>
+                <img src="../assets/user-guide/details/metric.png" alt="" />
+              </ol>
+            </li>
+            <li>
+              For each <a href="glossary#test">test</a>, the following are
+              presented:
+              <img
+                src="../assets/user-guide/details/test-closed.png"
+                style="margin-bottom: 5px"
+              />
+              <img src="../assets/user-guide/details/test-open.png" />
+              <ol class="inner-list">
+                <li>
+                  <strong>Status:</strong> It can be <strong>passed</strong>,
+                  <strong>failed</strong> or <strong>not executed</strong>. The
+                  status is passed when the
+                  <a href="glossary#digital-object">digital object</a> passes in
+                  the <a href="glossary#test">test</a>
+                  <a href="glossary#evaluation">evaluation</a>, and failed if
+                  not. The status is not executed when the
+                  <a href="glossary#test">test</a> doesn't run because of
+                  missing requirements.
+                </li>
+                <div id="status">
+                  <div>
+                    <img src="../assets/user-guide/details/passed.png" />
+                  </div>
+                  <div>
+                    <img src="../assets/user-guide/details/failed.png" />
+                  </div>
+                  <div>
+                    <img src="../assets/user-guide/details/not-executed.png" />
+                  </div>
+                </div>
+                <li>
+                  <strong>Score:</strong> A value between 0 and the maximum
+                  <a href="glossary#test">test</a> score, which varies from
+                  <a href="glossary#test">test</a> to
+                  <a href="glossary#test">test</a>.
+                </li>
+                <img
+                  src="../assets/user-guide/details/score.png"
+                  class="image-margin-10"
+                  style="width: 5%"
+                />
+                <li>
+                  <strong>Results:</strong> A summary of the
+                  <a href="glossary#test">test</a>'s result.
+                </li>
+                <li>
+                  <strong>Results details:</strong> An optional field that
+                  provides details about the
+                  <a href="glossary#test">test</a> execution.
+                </li>
+                <img src="../assets/user-guide/details/result.png" />
+                <li>
+                  <strong>Recommendations:</strong> Suggestions about what
+                  should be done to achieved a higher
+                  <a href="glossary#FAIRness"> FAIRness</a> score. Presented
+                  even if the <a href="glossary#test">test</a> passes.
+                </li>
+                <li>
+                  <strong>Recommendations details:</strong> An optional field
+                  that provides details about the recommendation, e.g., steps on
+                  how to implement the improvement.
+                </li>
+                <img
+                  src="../assets/user-guide/details/recommendation.png"
+                  alt=""
+                />
+                <li>
+                  <strong>Losses:</strong> What is lost if the
+                  <a href="glossary#digital-object">digital object</a> doesn't
+                  pass the <a href="glossary#test">test</a>.
+                </li>
+                <img src="../assets/user-guide/details/losses.png" alt="" />
+              </ol>
+            </li>
+          </ol>
+        </div>
+      </li>
+      <li>
+        <h3 id="fair-glossary">FAIR Glossary</h3>
+        <hr />
+        <div class="step-by-step">
+          <ol>
+            <li>
+              The page <strong>FAIR Glossary</strong> is composed of:
+              <ol class="inner-list">
+                <li>
+                  <strong>Sidebar:</strong> Allows to browse commonly used terms
+                  in the FAIR concepts.
+                </li>
+                <li><strong>Definitions:</strong>Definitions of each term</li>
+              </ol>
+              <img
+                src="../assets/user-guide/FAIR-glossary/FAIR-glossary-page.png"
+              />
+            </li>
+            <li>
+              Links are included in all terms present in the glossary that
+              appear on 2BFAIR's web pages so that the user can access the FAIR
+              Glossary by clicking on the word. Self-references are also
+              included to navigate through cross-terms in the glossary.
+            </li>
+          </ol>
+        </div>
+      </li>
+      <li>
+        <h3 id="tool-glossary">Tool Glossary</h3>
+        <hr />
+        <div class="step-by-step">
+          <ol>
+            <li>
+              The page <strong>Tool Glossary</strong> is composed of:
+              <ol class="inner-list">
+                <li>
+                  <strong>Sidebar:</strong> Allows to browse commonly used terms
+                  in the FAIR concepts.
+                </li>
+                <li><strong>Definitions:</strong>Definitions of each term</li>
+              </ol>
+              <img
+                src="../assets/user-guide/tool-glossary/tool-glossary-page.png"
+              />
+            </li>
+            <li>
+              Links are included in all terms present in the glossary that
+              appear on 2BFAIR's web pages so that the user can access the FAIR
+              Glossary by clicking on the word. Self-references are also
+              included to navigate through cross-terms in the glossary.
+            </li>
+          </ol>
+        </div>
+      </li>
+      <li>
+        <h3 id="full-report">Full Report</h3>
+        <hr />
+        <div class="step-by-step">
+          <ol>
+            <li>
+              The <strong>Full Report</strong> page is a compilation of the
+              Result, Explorer and Details pages and is composed of five
+              elements:
+              <ol class="inner-list">
+                <li>
+                  <strong>Download Button</strong>Allows the user to download
+                  the content of the page.
+                </li>
+                <li>
+                  <strong>Header:</strong> Presents information about the
+                  <a href="glossary#evaluation">evaluated </a>
+                  <a href="glossary#object"> object</a> and a
+                  <a href="glossary#FAIRness">FAIRness</a> badge.
+                  <a href="user-guide#explorer"
+                    >(Click here for more details)</a
+                  >
+                </li>
+                <li>
+                  <strong> Overall Results:</strong> Shows the
+                  <a href="glossary#FAIRness">FAIRness</a> badge of your
+                  <a href="glossary#data">data</a> and the URI entered as the
+                  <a href="glossary#digital-object">digital object's </a>
+                  <a href="glossary#identifier">identifier.</a>
+                  <a href="user-guide#result">(Click here for more details)</a>
+                </li>
+                <li>
+                  <strong
+                    >Result by <a href="glossary#metric">Metric</a></strong
+                  >
+                  Shows the results for each dimension divided by
+                  <a href="glossary#metric">metrics</a>.
+                  <a href="user-guide#explorer"
+                    >(Click here for more details)</a
+                  >
+                </li>
+                <li>
+                  <strong>Lists</strong> priority recommendations for
+                  improvements
+                </li>
+                <li>
+                  <strong>Detailed Results</strong> Provides information about
+                  each <a href="glossary#test">test</a>,
+                  <a href="glossary#metric">metric</a> and
+                  <a href="glossary#principle">principle.</a>
+                  <a href="user-guide#details">(Click here for more details)</a>
+                </li>
+              </ol>
+              <img
+                src="../assets/user-guide/full-report/full-report-page.png"
+              />
+            </li>
+            <li>
+              The download button allows the user to download a PDF file with
+              the
+              <a href="glossary#evaluation">evaluation</a> result.
+              <img
+                src="../assets/user-guide/full-report/download-button.png"
+                style="width: 30%"
+              />
+            </li>
+          </ol>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+#chart {
+  width: 100%;
+  height: 100%;
+  margin: auto auto 50px auto;
+  position: relative;
+}
+
+#chart ::ng-deep .axis {
+  font-size: 58px;
+  font-weight: 900;
+  color: #525252;
+  shape-rendering: geometricPrecision;
+}
+
+#chart ::ng-deep .total-score {
+  font-size: 100px;
+  fill: #525252;
+  shape-rendering: geometricPrecision;
+}
+
+#chart ::ng-deep .percent-sign {
+  font-size: 48px;
+  shape-rendering: geometricPrecision;
+}
+
+#chart ::ng-deep .lateral-bar {
+  fill: #525252;
+}

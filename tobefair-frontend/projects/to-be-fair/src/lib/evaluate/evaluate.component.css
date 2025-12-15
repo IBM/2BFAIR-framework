@@ -1,0 +1,55 @@
+.container input {
+  width: 100%;
+}
+
+:host div.outer {
+  /* border-style: solid;
+    border-color: blue; */
+  padding: 1em;
+}
+
+h2 {
+  font-weight: normal;
+  margin-block-start: 0em;
+  margin-bottom: 16px;
+}
+
+input {
+  border-radius: 0%;
+  border: 1px solid lightgray;
+  font-size: 14px;
+  padding: 12px 12px;
+  margin-top: 8px
+  /* width: 97.5%; */
+}
+
+input,
+select,
+textarea {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+::placeholder {
+  color: lightgray;
+  opacity: 1; /* Firefox */
+}
+
+label {
+  color: gray;
+}
+
+.right-aligned {
+  text-align: right;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #0062fe;
+}

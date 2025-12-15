@@ -1,0 +1,13 @@
+
+a {
+    text-decoration: none;
+    color: #0f62fe;
+    font-size: 15px;
+    padding-top: 5px;
+    display: block;
+    font-weight: normal;
+}
+
+a:hover {
+        color: #8a3ffc
+}

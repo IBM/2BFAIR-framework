@@ -1,0 +1,62 @@
+:host div.outer {
+  padding: 1em;
+  top: 85px;
+  background-color: transparent;
+  z-index: 200;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background: linear-gradient(#000, #000) center/1.5px 100% no-repeat;
+  grid-gap: 16px;
+  margin: 5px;
+  background-position: 65% 0;
+}
+
+h2 {
+  font-weight: normal;
+  margin-block-start: 0em;
+  font-size: 24px;
+}
+
+h3 {
+  font-weight: normal;
+  margin-block-start: 0em;
+  font-size: 20px;
+}
+
+hr {
+  height: 1.5px;
+  background-color: #161616;
+  border: none;
+  margin-left: -1em; /* Subtracting from margin to offset the padding that */
+  margin-right: -1em; /* comes from element :host div.outer */
+}
+
+#download {
+  margin-bottom: 15px;
+}
+#download a {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+#download a:hover,
+svg:hover {
+  cursor: pointer;
+  color: #0062fe;
+  fill: #0062fe;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #0062fe;
+}

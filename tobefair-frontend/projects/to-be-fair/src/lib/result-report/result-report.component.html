@@ -1,0 +1,33 @@
+<button cdsButton="primary" (click)="generatePDF()" id="downloadPDF">
+  Download your evaluation result as PDF
+</button>
+<div class="outer" id="content">
+  <h4>2BFAIR</h4>
+  <h1>2BFAIR FAIRness Evaluation Report</h1>
+  <br /><br />
+  <lib-header [useDownload]="false"></lib-header>
+  <h2>Overall Result</h2>
+  <p>
+    This part shows the FAIRness, a percentage grade indicating how close a
+    digital object is to fully abiding by the FAIR Principles, of your data.
+  </p>
+  <lib-result [useButton]="false"></lib-result>
+  <h2>Result by metric</h2>
+  <p>
+    This part shows the results divided by the metrics of each dimension and how
+    much was achieved in each one.
+  </p>
+  <lib-explorer
+    [useHeader]="false"
+    [useSeeMore]="false"
+    [useArrows]="false"
+  ></lib-explorer>
+  <h2>Detailed results</h2>
+  <p>
+    This part is divided into principles. Each principle is divided by metrics.
+    Each metric is divided into tests. In each test, it explains the test
+    result, the score obtained, the maturity of each metric, a recommendation
+    and what the person loses if they do not pass this test.
+  </p>
+  <lib-details [useHeader]="false" [expanded]="this.expanded.value"></lib-details>
+</div>

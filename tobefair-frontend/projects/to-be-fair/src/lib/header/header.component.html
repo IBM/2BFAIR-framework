@@ -1,0 +1,47 @@
+<div class="outer">
+  <div class="grid-container">
+    <div class="grid-item">
+      <h2>
+        Evaluated
+        <a href="/glossary#resource">resource</a>:
+      </h2>
+      <a
+        id="digitalObjectID"
+        role="link"
+        aria-disabled="true"
+        href="{{ digitalObjectLandingPageUrl }}"
+        >{{ digitalObjectLandingPageUrl }}</a
+      >
+      <br />
+      <br />
+      <!-- <h3 style="margin-top: 0; margin-bottom: 0.5em">
+        Community: {{ community }}
+      </h3>
+      <h3 style="margin-top: 0; margin-block-end: 0">Task: {{ task }}</h3>
+      <br /> -->
+      <div id="download">
+        <a (click)="saveResponse()"
+          ><svg
+            cdsIcon="download"
+            size="20"
+            class="cds--btn__icon"
+            style="margin-right: 10px"
+          ></svg
+          >Download your evaluation result</a
+        >
+      </div>
+    </div>
+    <div class="grid-item">
+      <span style="display: inline-flex">
+        <h2>Overall:</h2>
+        <lib-badge
+          [fairnessEvaluation]="fairnessEvaluation"
+          [useLabel]="true"
+          style="width: 50%; margin-left: 1em"
+        ></lib-badge>
+      </span>
+    </div>
+  </div>
+  <br />
+  <hr />
+</div>

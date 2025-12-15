@@ -1,0 +1,12 @@
+* {
+  text-align: center;
+}
+.error-container {
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 5px;
+}
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}

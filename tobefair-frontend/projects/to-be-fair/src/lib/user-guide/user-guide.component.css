@@ -1,0 +1,80 @@
+* {
+  scroll-behavior: smooth;
+}
+
+:host div.outer {
+  padding: 1em;
+}
+/* Heading styles */
+h2 {
+  font-weight: normal;
+  margin-block-start: 0;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+.pages {
+  margin: 48px;
+}
+
+.step-by-step {
+  margin: 32px;
+}
+ol {
+  list-style-type: decimal;
+}
+
+img {
+  width: 70%;
+  margin: 25px;
+  display: block;
+  border: black solid 1px;
+}
+
+li {
+  margin: 8px;
+}
+
+.inner-list {
+  list-style-type: lower-alpha;
+  margin: 16px;
+}
+
+#status {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#status img {
+  height: 50px;
+}
+
+.image-auto {
+  width: auto;
+}
+
+.image-margin-10 {
+  margin: 10px;
+}
+
+a:hover {
+  color: #0f62fe;
+  text-decoration: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/*Styles to create a space above the id*/
+[id]:before {
+  content: "";
+  display: block;
+  height: 50px;
+  margin-top: -50px; /* Invert the space above the link destination*/
+  visibility: hidden;
+}

@@ -1,0 +1,137 @@
+@if (this.error) {
+  <lib-error [error]="this.error"></lib-error>
+} @else {
+  @if (this.useHeader) {
+    <lib-header></lib-header>
+  }
+
+  <div class="outer">
+    <!-- <div id="sort">
+    <span>
+      <strong>Sort</strong>
+      <a href=""><img src="../../assets/sort.png" alt="" /></a>
+    </span>
+  </div>-->
+    @if (detailedResult) {
+      @for (result of getArrayFromDict(detailedResult); track $index) {
+        @for (dimension of getArrayFromDict(result); track $index) {
+          <div [id]="dimension.dimension_id">
+            @for (
+              principle of getArrayFromDict(dimension.results);
+              track $index
+            ) {
+              <div class="principles">
+                <h2>
+                  {{ principle.principle_id }}. {{ principle.principle_name }}
+                  <span style="color: #6f6f6f; font-size: 18px"
+                    >Score: {{ principle.score }}</span
+                  >
+                </h2>
+                @for (
+                  metric of getArrayFromDict(principle.results);
+                  track $index
+                ) {
+                  <div class="test">
+                    <h3>
+                      {{ metric.metric_id }}: {{ metric.metric_name }}
+                      <span style="color: #6f6f6f; font-size: 12px">
+                        <a href="tool-glossary#maturity"> Maturity </a>:
+                        {{ metric.metric_maturity }} • Score:
+                        {{ metric.metric_score }} •
+                        <a href="tool-glossary#scoring-mechanism"
+                          >Score Mechanism:</a
+                        >
+                        {{ metric.scoring_mechanism }}
+                      </span>
+                    </h3>
+                    <cds-accordion [size]="'md'">
+                      @for (
+                        test of getArrayFromDict(metric.results);
+                        track $index
+                      ) {
+                        <ng-template get></ng-template>
+
+                        <cds-accordion-item
+                          [id]="test.test_id"
+                          [title]="getTitle(test)"
+                          (selected)="selected($event, test)"
+                          [expanded]="this.expanded"
+                        >
+                          @if (test.status === "passed") {
+                            <span class="status">
+                              <svg
+                                cdsIcon="checkmark--filled"
+                                size="16"
+                                fill="#24a148"
+                                class="cds--btn__icon"
+                              ></svg>
+                              Passed • {{ test.score }}/{{ test.max_score }}
+                            </span>
+                          }
+                          @if (test.status === "failed") {
+                            <span class="status">
+                              <svg
+                                cdsIcon="error--filled"
+                                size="16"
+                                fill="#da1e28"
+                                class="cds--btn__icon"
+                              ></svg>
+                              Failed • {{ test.score }}/{{ test.max_score }}
+                            </span>
+                          }
+                          @if (test.status === "not executed") {
+                            <span class="status">
+                              <svg
+                                cdsIcon="circle-stroke"
+                                size="glyph"
+                                fill="#6f6f6f"
+                                class="cds--btn__icon"
+                              ></svg>
+                              Not Executed • {{ test.score }}/{{
+                                test.max_score
+                              }}
+                            </span>
+                          }
+                          <span class="recommendation">
+                            <svg
+                              cdsIcon="report"
+                              size="20"
+                              class="cds--btn__icon"
+                            ></svg>
+                            <strong> {{ test.result_description }}</strong>
+                          </span>
+                          <p>
+                            {{ test.result_details }}
+                          </p>
+                          <span class="recommendation">
+                            <svg
+                              cdsIcon="growth"
+                              size="20"
+                              class="cds--btn__icon"
+                            ></svg>
+                            <strong> {{ test.recommendation }}</strong>
+                          </span>
+                          <p>
+                            {{ test.recommendation_details }}
+                          </p>
+                          <span class="losses">
+                            <svg
+                              cdsIcon="warning--alt"
+                              size="20"
+                              class="cds--btn__icon"
+                            ></svg>
+                            <strong> {{ test.losses }}</strong></span
+                          >
+                        </cds-accordion-item>
+                      }
+                    </cds-accordion>
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        }
+      }
+    }
+  </div>
+}

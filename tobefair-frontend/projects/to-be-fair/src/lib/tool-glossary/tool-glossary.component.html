@@ -1,0 +1,129 @@
+<div class="outer">
+  <header>
+    <h2>Tool Glossary</h2>
+  </header>
+  <br />
+  <hr />
+  <section>
+    <div class="container">
+      <div class="navigation tool">
+        <ul class="list">
+          <li class="list-item">
+            <a href="tool-glossary#importance-of-metric">
+              <span class="text">Importance of the Metric</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="tool-glossary#maturity">
+              <span class="text">Maturity</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="tool-glossary#maturity-computation">
+              <span class="text">Maturity Computation</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="tool-glossary#scoring-mechanism">
+              <span class="text">Scoring Mechanism</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="vertical-line"></div>
+    <div class="glossary">
+      <div class="scrollable-content">
+        <ul class="list">
+          <li id="importance-of-metric">
+            <strong>Importance of the Metric:</strong> We are using the
+            definition presented by the
+            <a
+              href="https://datascience.codata.org/articles/10.5334/dsj-2020-041"
+              >RDA FAIR Data Maturity Model</a
+            >
+            which may be:
+            <ol class="inner-list">
+              <li>
+                <strong> Essential:</strong> The
+                <a href="glossary#metric">Metric</a> addresses an aspect with
+                crucial importance to achieve
+                <a href="glossary#FAIRness"> FAIRness</a> under most
+                circumstances, i.e., the
+                <a href="glossary#digital-object">Digital Object</a> will not be
+                FAIR if it does not fulfill the metric.
+              </li>
+              <li>
+                <strong>Important:</strong> The
+                <a href="glossary#metric">Metric</a> "addresses an aspect that
+                might not be of the utmost importance under specific
+                circumstances, but its satisfaction, if at all possible, would
+                substantially increase
+                <a href="glossary#FAIRness"> FAIRness</a>".
+              </li>
+              <li>
+                <strong>Useful:</strong> The
+                <a href="glossary#metric">Metric</a> "addresses an aspect that
+                is nice-to-have but is not necessarily indispensable".
+              </li>
+            </ol>
+          </li>
+          <li id="maturity">
+            <strong>Maturity:</strong> The maturity levels correspond to a
+            simplified scoring system to indicate the FAIR compliance of a
+            <a href="glossary#digital-object">Digital Object</a>. 2BFAIR follows
+            the levels defined by F-UJI,which were inspired by the FAIRsFAIR CMMI-based
+            three tiers. 
+            The F-UJI maturity levels are incomplete (0), initial (1), moderate (2), and advanced (3). 
+            For 2BFAIR, the maturity levels are defined as follow:
+            <ol class="inner-list" style="list-style-type: decimal" start="0">
+              <li>
+                <strong>Incomplete:</strong> The
+                <a href="glossary#digital-object">Digital Object</a> does not
+                address the
+                <a href="glossary#FAIR-principles">FAIR Principles</a>.
+              </li>
+              <li>
+                <strong>Initial:</strong> Some initial characteristics are
+                handled toward FAIR although they do not meet the
+                <a href="glossary#principle">Principles</a>' definitions. There
+                is intent to be compliant with FAIR principles and awareness of
+                existing issues.
+              </li>
+              <li>
+                <strong>Moderate:</strong> Limited FAIR characteristics are
+                handled and there is focus toward full alignment.
+              </li>
+              <li>
+                <strong>Advanced:</strong> Complete coverage of the FAIR
+                <a href="glossary#principle">Principles</a>' characteristics
+                aligned with organizational standards and practice.
+              </li>
+            </ol>
+          </li>
+          <li id="maturity-computation">
+            <strong>Maturity Computation:</strong> The maturity level is
+            calculated for principle as follows. In case of at least one metric
+            has reached level 'initial', the corresponding principle cannot have
+            a lower level even if all other metrics are scored lower. All levels
+            above 'initial' are calculated as the rounded mean of all metrics
+            scores for a given principle. The overall F-UJI FAIR level for a
+            given research data object would analogously be calculated as a
+            rounded mean of all principle scores.
+          </li>
+          <li id="scoring-mechanism">
+            <strong>Scoring Mechanism:</strong> The scoring mechanism defines
+            how to compute the <a href="glossary#metric">Metric</a>'s score.
+            There are two types of computation: Alternative or Cumulative. In
+            the alternative computation,
+            <a href="glossary#test">Test</a> results are considered
+            independently, i.e., only one of the metric’s test can pass. The
+            metric’s score then reflects the score of the test that passed. In
+            the cumulative computation, the metric’s score is the total of the
+            scores of all tests that passed.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

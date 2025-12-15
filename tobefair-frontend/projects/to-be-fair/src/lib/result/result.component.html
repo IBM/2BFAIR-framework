@@ -1,0 +1,84 @@
+<div class="outer">
+  @if (this.error) {
+    <lib-error [error]="this.error"></lib-error>
+  } @else if (isLoading === true) {
+    <cds-loading
+      [isActive]="true"
+      [size]="'normal'"
+      [overlay]="true"
+    ></cds-loading>
+  } @else if (isLoading === false) {
+    <div id="notifications-box">
+      @for (notification of this.notifications; track $index){
+        @if (notification.isOpen){
+          <cds-inline-notification
+            [notificationObj]="{
+            type: notification.type,
+            title: notification.title,
+            message: notification.description,
+            lowContrast: true,
+            showClose: true
+            }"
+            (close) = 'closeNotification(notification.id)'
+        ></cds-inline-notification>
+        }
+      }
+    </div>
+
+    <h2><a href="/glossary#evaluation">Evaluation</a> result</h2>
+
+    <div class="grid-container">
+      <div></div>
+      <lib-badge
+        [fairnessEvaluation]="fairnessEvaluation"
+        [useLabel]="true"
+      ></lib-badge>
+      <div></div>
+    </div>
+
+    <hr />
+
+    <br />
+
+    <p>
+      <span class="bold"
+        ><a href="glossary#digital-object" class="glossary">Digital Object</a>
+        URI:
+      </span>
+      @if (doidHref) {
+        <a [href]="doidHref" id="digitalObjectId">{{ digitalObjectID }}</a>
+      } @else {
+        <a id="digitalObjectId">{{ digitalObjectID }}</a>
+      }
+    </p>
+
+    <p>
+      <span class="bold"
+        ><a href="/glossary#metadata-record" class="glossary"
+          >Metadata Record</a
+        >
+        URI:</span
+      >
+      @if (mridHref) {
+        <a [href]="mridHref" id="metadataRecordID">{{ metadataRecordID }}</a>
+      } @else {
+        <a id="metadataRecordID">{{ metadataRecordID }}</a>
+      }
+    </p>
+
+    <!-- <p><span class="bold">Community: </span>{{ community }}</p>
+
+  <p><span class="bold">Task: </span>{{ task }}</p> -->
+
+    <br />
+    <button
+      cdsButton="primary"
+      routerLink="/explorer"
+      routerLinkActive="active_route"
+      ariaCurrentWhenActive="page"
+      id="explorer-button"
+    >
+      FAIRness Explorer &nbsp; &nbsp; &rarr;
+    </button>
+  }
+</div>

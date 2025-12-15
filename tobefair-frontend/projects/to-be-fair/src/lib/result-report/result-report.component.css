@@ -1,0 +1,23 @@
+.outer {
+  padding: 1em;
+}
+
+h4 {
+  color: #6f6f6f;
+}
+
+p {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+button {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}

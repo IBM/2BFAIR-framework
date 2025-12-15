@@ -1,0 +1,133 @@
+/*@import "@carbon/colors";*/
+
+:host div.outer {
+  padding: 1em;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+/*Sort styles*/
+#sort {
+  position: -webkit-sticky; /* For compatibility with some browsers */
+  position: sticky;
+  top: 365px;
+  right: 45px;
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  float: inline-end;
+  width: 85px;
+}
+
+#sort img {
+  width: 30px;
+}
+
+#sort span {
+  display: flex;
+  align-items: center;
+}
+
+/*Principle styles*/
+.principles {
+  margin: 10px;
+}
+.principles h2,
+h3 {
+  font-weight: normal;
+}
+.principles h2 {
+  margin-top: 40px;
+  font-size: 24px;
+}
+
+.principles h3 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.principles h4 {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.principles hr {
+  height: 1px;
+  background-color: black;
+  border: none;
+}
+
+.principles cds-accordion-item span {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 10px -200px 10px 10px;
+}
+
+.principles img {
+  margin: 5px;
+  width: 14px;
+}
+
+/*Test syles*/
+.test {
+  margin: 30px 10px 10px;
+}
+
+/*Styles to create a space above the id*/
+[id]:before {
+  content: "";
+  display: block;
+  height: 20px;
+  margin-top: -20px; /* Invert the space above the link destination*/
+  visibility: hidden;
+}
+
+li {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+cds-accordion-item {
+  background: #f4f4f4;
+}
+
+svg {
+  margin-right: 8px;
+}
+
+.test .status {
+  margin: 0px -200px 24px 16px;
+  font-size: 12px;
+  color: #6f6f6f;
+  background-color: blue-60;
+}
+
+.test .recommendation {
+  margin: 24px -250px 8px 16px;
+}
+
+.test p {
+  margin: 0px -200px 12px 54px;
+}
+
+.test .losses {
+  margin: 12px -200px 0px 16px;
+}
+
+#checkmark {
+  color: green;
+}
+
+a:hover {
+  color: #0f62fe;
+  text-decoration: none;
+}
+
+a {
+  color: #6f6f6f;
+  text-decoration: none;
+}

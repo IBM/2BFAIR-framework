@@ -1,0 +1,22 @@
+<lib-header id="header"></lib-header>
+
+<div class="outer">
+  <section>
+    <div class="explore">
+      <div #divGraph id="graph"></div>
+    </div>
+    <div>
+      <h6>Measure of Importance</h6>
+      <lib-legend [scale]="0.7"></lib-legend>
+    </div>
+    <br />
+    <div class="priority-suggestions">
+      <h3>Priority recommendations for improvements</h3>
+      <lib-recommendation-list
+        [recommendations]="fairnessEvaluation.priorityRecommendations"
+        redirect_ref="details"
+        [useSeeMore]="this.useSeeMore"
+      ></lib-recommendation-list>
+    </div>
+  </section>
+</div>

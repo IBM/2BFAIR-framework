@@ -1,0 +1,52 @@
+<div class="outer">
+  <h2>FAIRness <a href="/glossary#evaluation">Evaluation</a></h2>
+
+  <form
+    action=""
+    class="container"
+    [formGroup]="evaluationRequestForm"
+    (ngSubmit)="submitEvaluationRequest()"
+  >
+    <label for="resource"><a href="/glossary#resource">Resource</a> URI</label>
+    <input
+      id="resource"
+      type="text"
+      name="resource"
+      placeholder="https://zenodo.org/records/8255910"
+      formControlName="digitalObjectURI"
+    />
+
+    <br />
+    <br />
+
+    <!-- <label for="community">Interested <a href="/glossary#community-standard">community</a></label> <br />
+    <input
+      id="community"
+      type="text"
+      name="community"
+      placeholder="Choose or enter an option"
+      formControlName="community"
+    />
+
+    <br />
+    <br />
+
+    <label for="task">Task</label> <br />
+    <input
+      id="task"
+      type="text"
+      name="task"
+      placeholder="Choose or enter an option"
+      formControlName="task"
+    />
+
+    <br />
+    <br /> -->
+
+    <div class="right-aligned">
+      <button cdsButton="primary" type="submit">
+        Run &nbsp; &nbsp; &nbsp; &nbsp; &rarr;
+      </button>
+    </div>
+  </form>
+</div>
