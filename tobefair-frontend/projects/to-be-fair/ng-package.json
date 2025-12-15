@@ -1,0 +1,8 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/to-be-fair",
+  "lib": {
+    "entryFile": "src/public-api.ts"
+  },
+  "assets": ["src/lib/assets"]
+}

@@ -1,0 +1,8 @@
+:host div.outer {
+  padding: 1em;
+}
+/* Heading styles */
+h2 {
+  font-weight: normal;
+  margin-block-start: 0;
+}

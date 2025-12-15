@@ -1,0 +1,57 @@
+<div [cdsTheme]="'g10'" class="navbar">
+  <cds-header name="2BFAIR" href="/">
+    <cds-header-navigation>
+      <cds-header-item
+        routerLink="/result"
+        routerLinkActive="active_route"
+        ariaCurrentWhenActive="page"
+      >
+        Result
+      </cds-header-item>
+      <cds-header-item
+        routerLink="/explorer"
+        routerLinkActive="active_route"
+        ariaCurrentWhenActive="page"
+      >
+        Explorer
+      </cds-header-item>
+      <cds-header-item
+        routerLink="/details"
+        routerLinkActive="active_route"
+        ariaCurrentWhenActive="page"
+      >
+        Details
+      </cds-header-item>
+      <cds-header-item
+        routerLink="/glossary"
+        routerLinkActive="active_route"
+        ariaCurrentWhenActive="page"
+      >
+        FAIR Glossary
+      </cds-header-item>
+      <cds-header-item
+        routerLink="/tool-glossary"
+        routerLinkActive="active_route"
+        ariaCurrentWhenActive="page"
+      >
+        Tool Glossary
+      </cds-header-item>
+      <cds-header-item
+        routerLink="/user-guide"
+        routerLinkActive="active_route"
+        ariaCurrentWhenActive="page"
+      >
+        User Guide
+      </cds-header-item>
+      <cds-header-item
+        routerLink="/result-report"
+        routerLinkActive="active_route"
+        ariaCurrentWhenActive="page"
+      >
+        Full Report
+      </cds-header-item>
+    </cds-header-navigation>
+  </cds-header>
+</div>
+
+<router-outlet></router-outlet>

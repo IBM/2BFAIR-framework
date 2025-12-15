@@ -1,0 +1,55 @@
+<div class="grid-container">
+  <div class="welcome">
+    <div class="title-block">
+      <h2>Welcome</h2>
+    <p>
+      2BFAIR is a tool that uses FAIR principles to enhance your data and improve scientific discovery in a fully customizable way.
+    </p>
+    </div>
+
+    <form
+      action=""
+      class="form-container"
+      [formGroup]="evaluationRequestForm"
+      (ngSubmit)="submitEvaluationRequest()"
+    >
+      <label for="resource"><a href="/glossary#resource">Resource Identifier</a> (URI)</label>
+      <input
+        id="resource"
+        type="text"
+        name="resource"
+        placeholder="Enter an URI to evaluate"
+        formControlName="digitalObjectURI"
+      />
+
+      <div id="execute-container">
+        <span>
+          See an evaluation example:
+          <button id="example-button" (click)="submitTestEvaluationRequest()">
+            <p id="example-link">10.5281/zenodo.8255910</p>
+          </button>
+        </span>
+
+        <button cdsButton="primary" type="submit" >
+          Start an evaluation
+        </button>
+      </div>
+
+    </form>
+
+    <div class="black-line"></div>
+
+    <div id="resources-container">
+      <h4>Additional Resources</h4>
+      <div id="gray-line"></div>
+      <app-link-button label="2BFAIR Backend Framework" url="https://github.ibm.com/brl-kbe/dwb-2BFAIR-backend"/>
+      <app-link-button label="2BFAIR Frontend Library" url="https://github.ibm.com/brl-kbe/2BFAIR-frontend"/>
+      <app-link-button label="FAIRsFAIR Data Object Assessment Metrics" url="https://zenodo.org/records/15045911"/>
+
+    </div>
+  </div>
+
+  <div id="badge-container">
+    <img id="badge" src="../assets/badge_animado.gif" style="width: 80%"/>
+  </div>
+</div>
