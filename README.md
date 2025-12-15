@@ -38,6 +38,40 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
+## To install all requirements to use the framework and the backend
+
+- Install the framework libraries: `pip install -r requirements.txt`
+- Install the framework dev libraries: `pip install -r dev_requirements.txt`
+- Install the backend libraries: `pip install -r tobefair_backend_requirements.txt`
+- Install the backend dev libraries: `pip install -r tobefair_backend_dev_requirements.txt`
+
+## To install and use 2BFAIR_backend implementation
+
+To run 2BFAIR_backend implementation.
+
+- Install the framework libraries: `pip install -r requirements.txt`
+- Install the required libraries: `pip install -r tobefair_backend_requirements.txt`
+- Using Visual Studio Code, configure the following debug option:
+
+```json
+"configurations": [
+        {
+            "name": "Python Debugger: FastAPI",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "tobefair_backend.service.main:app",
+                "--reload"
+            ],
+            "jinja": true,
+        },
+```
+
+## Run the OpenAPI UI
+
+- After starting the service, open the URL [http://localhost:8080/docs](http://localhost:8080/docs) in your browser, and execute the `POST /evaluate` service.
+
 ## Installation
 
 ### How to install the framework as a library
